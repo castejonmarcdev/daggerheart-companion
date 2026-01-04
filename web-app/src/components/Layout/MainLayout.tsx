@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Sidebar } from './Sidebar';
 import { SearchBar } from '../Search/SearchBar';
@@ -31,10 +31,10 @@ export function MainLayout() {
                 <span></span>
               </span>
             </button>
-            <div className="header-title">
+            <Link to="/" className="header-title">
               <span className="header-icon">⚔️</span>
               <h1>Daggerheart Companion</h1>
-            </div>
+            </Link>
           </div>
           <SearchBar />
         </div>

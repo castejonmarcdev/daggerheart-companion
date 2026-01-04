@@ -6,14 +6,26 @@ interface SidebarProps {
   onClose?: () => void;
 }
 
+interface NavItem {
+  title: string;
+  path: string;
+}
+
 interface NavSection {
   title: string;
   path: string;
   icon: string;
-  children?: { title: string; path: string }[];
+  children?: NavItem[];
 }
 
-const navSections: NavSection[] = [
+interface RootCategory {
+  title: string;
+  icon: string;
+  sections: NavSection[];
+}
+
+// Wiki sections - reference content
+const wikiSections: NavSection[] = [
   {
     title: 'Character Creation',
     path: '/guides/character-creation',
@@ -151,8 +163,31 @@ const navSections: NavSection[] = [
   },
 ];
 
+// Tools sections - interactive tools
+const toolsSections: NavSection[] = [
+  {
+    title: 'Character Creator',
+    path: '/tools/character-creator',
+    icon: '🧙',
+  },
+];
+
+const rootCategories: RootCategory[] = [
+  {
+    title: 'Wiki',
+    icon: '📚',
+    sections: wikiSections,
+  },
+  {
+    title: 'Tools',
+    icon: '🛠️',
+    sections: toolsSections,
+  },
+];
+
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Equipment']));
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(['Wiki', 'Tools']));
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const location = useLocation();
 
   // Close mobile menu when navigating
@@ -161,6 +196,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       onClose();
     }
   }, [location.pathname]);
+
+  const toggleCategory = (title: string) => {
+    setExpandedCategories(prev => {
+      const next = new Set(prev);
+      if (next.has(title)) {
+        next.delete(title);
+      } else {
+        next.add(title);
+      }
+      return next;
+    });
+  };
 
   const toggleSection = (title: string) => {
     setExpandedSections(prev => {
@@ -177,42 +224,60 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <aside className={`sidebar ${isOpen ? 'mobile-open' : ''}`}>
       <nav className="sidebar-nav">
-        {navSections.map(section => (
-          <div key={section.path} className="nav-section">
-            {section.children ? (
-              <>
-                <button
-                  className="nav-section-header"
-                  onClick={() => toggleSection(section.title)}
-                >
-                  <span className="nav-icon">{section.icon}</span>
-                  <span className="nav-title">{section.title}</span>
-                  <span className={`nav-chevron ${expandedSections.has(section.title) ? 'expanded' : ''}`}>
-                    ▸
-                  </span>
-                </button>
-                {expandedSections.has(section.title) && (
-                  <div className="nav-children">
-                    {section.children.map(child => (
+        {rootCategories.map(category => (
+          <div key={category.title} className="nav-root-category">
+            <button
+              className="nav-category-header"
+              onClick={() => toggleCategory(category.title)}
+            >
+              <span className="nav-icon">{category.icon}</span>
+              <span className="nav-category-title">{category.title}</span>
+              <span className={`nav-chevron ${expandedCategories.has(category.title) ? 'expanded' : ''}`}>
+                ▸
+              </span>
+            </button>
+            {expandedCategories.has(category.title) && (
+              <div className="nav-category-content">
+                {category.sections.map(section => (
+                  <div key={section.path} className="nav-section">
+                    {section.children ? (
+                      <>
+                        <button
+                          className="nav-section-header"
+                          onClick={() => toggleSection(section.title)}
+                        >
+                          <span className="nav-icon">{section.icon}</span>
+                          <span className="nav-title">{section.title}</span>
+                          <span className={`nav-chevron ${expandedSections.has(section.title) ? 'expanded' : ''}`}>
+                            ▸
+                          </span>
+                        </button>
+                        {expandedSections.has(section.title) && (
+                          <div className="nav-children">
+                            {section.children.map(child => (
+                              <NavLink
+                                key={child.path}
+                                to={child.path}
+                                className={({ isActive }) => `nav-link nav-child ${isActive ? 'active' : ''}`}
+                              >
+                                {child.title}
+                              </NavLink>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    ) : (
                       <NavLink
-                        key={child.path}
-                        to={child.path}
-                        className={({ isActive }) => `nav-link nav-child ${isActive ? 'active' : ''}`}
+                        to={section.path}
+                        className={({ isActive }) => `nav-link nav-section-link ${isActive ? 'active' : ''}`}
                       >
-                        {child.title}
+                        <span className="nav-icon">{section.icon}</span>
+                        <span className="nav-title">{section.title}</span>
                       </NavLink>
-                    ))}
+                    )}
                   </div>
-                )}
-              </>
-            ) : (
-              <NavLink
-                to={section.path}
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              >
-                <span className="nav-icon">{section.icon}</span>
-                <span className="nav-title">{section.title}</span>
-              </NavLink>
+                ))}
+              </div>
             )}
           </div>
         ))}

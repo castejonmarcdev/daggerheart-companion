@@ -115,6 +115,12 @@ body {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-title:hover h1 {
+  color: var(--color-secondary-dark);
 }
 
 .header-icon {
@@ -704,8 +710,66 @@ body {
   padding: var(--spacing-md);
 }
 
+/* Root category (Wiki, Tools) */
+.nav-root-category {
+  margin-bottom: var(--spacing-sm);
+}
+
+.nav-category-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: transparent;
+  border: none;
+  color: var(--color-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+  font-family: var(--font-heading);
+}
+
+.nav-category-header:hover {
+  background: var(--color-bg-hover);
+}
+
+.nav-category-title {
+  flex: 1;
+  text-align: left;
+}
+
+.nav-category-content {
+  padding-left: var(--spacing-sm);
+  border-left: 2px solid var(--color-border);
+  margin-left: var(--spacing-md);
+  margin-top: var(--spacing-xs);
+}
+
 .nav-section {
   margin-bottom: var(--spacing-xs);
+}
+
+.nav-section-link {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.nav-section-link:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text);
+}
+
+.nav-section-link.active {
+  background: var(--color-primary);
+  color: var(--color-text);
 }
 
 .nav-section-header {

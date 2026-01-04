@@ -16,3 +16,4 @@ export { MechanicDetailPage } from './MechanicDetailPage';
 export { MechanicsByCategoryPage } from './MechanicsByCategoryPage';
 export { GuideDetailPage } from './GuideDetailPage';
 export { SearchResultsPage } from './SearchResultsPage';
+export { CharacterCreatorPage } from './CharacterCreatorPage';
