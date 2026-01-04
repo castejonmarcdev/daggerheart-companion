@@ -28,40 +28,107 @@ interface CharacterState {
 const classInfo: Record<string, { tagline: string; examples: string[] }> = {
   bard: {
     tagline: 'Inspire allies and manipulate foes with the power of performance and charm.',
-    examples: ['Jaskier (The Witcher)', 'Star-Lord (Guardians)', 'Captain Jack Sparrow'],
+    examples: ['Jaskier (The Witcher)', 'Edward Elric (FMA)', 'Jack Sparrow (Pirates)'],
   },
   druid: {
     tagline: 'Channel primal nature magic, shapeshift, and command the wild.',
-    examples: ['Radagast (LOTR)', 'Beast Boy (Teen Titans)', 'Poison Ivy'],
+    examples: ['San (Princess Mononoke)', 'Beast Boy (Teen Titans)', 'Maui (Moana)'],
   },
   guardian: {
     tagline: 'An unbreakable defender who shields allies and holds the line.',
-    examples: ['Captain America', 'Brienne of Tarth (GoT)', 'The Mandalorian'],
+    examples: ['Captain America (MCU)', 'Reinhardt (Overwatch)', 'Brienne (GoT)'],
   },
   ranger: {
-    tagline: 'A deadly hunter who tracks prey and strikes from the shadows.',
-    examples: ['Aragorn (LOTR)', 'Hawkeye (Avengers)', 'Katniss Everdeen'],
+    tagline: 'A deadly hunter—alone or with an animal companion—tracking prey through any terrain.',
+    examples: ['Legolas (LOTR)', 'Aloy (Horizon)', 'San (Princess Mononoke)'],
   },
   rogue: {
-    tagline: 'A cunning trickster who exploits weaknesses and bends the rules.',
-    examples: ['Black Widow', 'Arya Stark (GoT)', 'Han Solo'],
+    tagline: 'A cunning trickster who commands shadows and leverages criminal contacts.',
+    examples: ['Ezio (Assassin\'s Creed)', 'Catwoman (DC)', 'Spike (Cowboy Bebop)'],
   },
   seraph: {
     tagline: 'A divine warrior blessed with holy power to smite and heal.',
-    examples: ['Thor (MCU)', 'Wonder Woman', 'Castiel (Supernatural)'],
+    examples: ['Wonder Woman (DC)', 'Paladin Cecil (FF4)', 'Mercy (Overwatch)'],
   },
   sorcerer: {
     tagline: 'Raw magical power flows through you, wild and unpredictable.',
-    examples: ['Scarlet Witch', 'Elsa (Frozen)', 'Jean Grey (X-Men)'],
+    examples: ['Elsa (Frozen)', 'Raven (Teen Titans)', 'Todoroki (MHA)'],
   },
   warrior: {
     tagline: 'A master of weapons and combat, always ready for a fight.',
-    examples: ['Conan the Barbarian', 'Gimli (LOTR)', 'Kratos (God of War)'],
+    examples: ['Guts (Berserk)', 'Kratos (God of War)', 'Mulan (Disney)'],
   },
   wizard: {
     tagline: 'A scholar of the arcane who bends reality through knowledge.',
-    examples: ['Gandalf (LOTR)', 'Doctor Strange', 'Hermione Granger'],
+    examples: ['Doctor Strange (MCU)', 'Howl (Howl\'s Moving Castle)', 'Hermione (Harry Potter)'],
   },
+};
+
+// Subclass descriptions - power fantasy focused, short
+const subclassInfo: Record<string, { tagline: string; examples: string[] }> = {
+  // Bard
+  'wordsmith': { tagline: 'Your words cut deeper than any blade, shaping reality itself.', examples: ['Scheherazade', 'Tyrion (GoT)'] },
+  'troubadour': { tagline: 'Your music stirs the soul, turning the tide of battle with a song.', examples: ['Jaskier (Witcher)', 'Brook (One Piece)'] },
+  // Druid
+  'warden-of-the-elements': { tagline: 'Command fire, water, earth, and wind as extensions of your will.', examples: ['Aang (Avatar)', 'Storm (X-Men)'] },
+  'warden-of-renewal': { tagline: 'Channel nature\'s healing power, restoring life and vitality.', examples: ['Moana', 'Groot (Guardians)'] },
+  // Guardian
+  'stalwart': { tagline: 'An immovable fortress—while you stand, your allies cannot fall.', examples: ['Captain America', 'All Might (MHA)'] },
+  'vengeance': { tagline: 'Turn every wound you suffer into devastating retribution.', examples: ['The Punisher', 'Guts (Berserk)'] },
+  // Ranger
+  'wayfinder': { tagline: 'No terrain can stop you. The wild is your domain and sanctuary.', examples: ['Bear Grylls', 'Ashitaka (Mononoke)'] },
+  'beastbound': { tagline: 'Fight alongside a loyal animal companion, two hearts as one.', examples: ['Hiccup & Toothless (HTTYD)', 'Jon Snow & Ghost'] },
+  // Rogue
+  'syndicate': { tagline: 'Your network of contacts and underworld connections opens any door.', examples: ['Ocean\'s Eleven crew', 'Gentleman (Kingsman)'] },
+  'nightwalker': { tagline: 'Become one with the shadows, striking unseen and vanishing without a trace.', examples: ['Batman', 'Corvo (Dishonored)'] },
+  // Seraph
+  'winged-sentinel': { tagline: 'Soar on divine wings, raining judgment from above.', examples: ['Angel (X-Men)', 'Mercy (Overwatch)'] },
+  'divine-wielder': { tagline: 'Wield holy weapons of pure light, smiting evil with righteous fury.', examples: ['Wonder Woman', 'Michael (Supernatural)'] },
+  // Sorcerer
+  'elemental-origin': { tagline: 'Your very blood burns with elemental chaos seeking release.', examples: ['Firestorm (DC)', 'Todoroki (MHA)'] },
+  'primal-origin': { tagline: 'Ancient beast spirits rage within you, clawing to break free.', examples: ['Naruto (Nine-Tails)', 'Venom'] },
+  // Warrior
+  'call-of-the-brave': { tagline: 'Rally your allies with battle cries that turn fear into courage.', examples: ['William Wallace (Braveheart)', 'Theoden (LOTR)'] },
+  'call-of-the-slayer': { tagline: 'Hunt the biggest threats, taking down monsters others flee from.', examples: ['Geralt (Witcher)', 'Doom Slayer'] },
+  // Wizard
+  'school-of-knowledge': { tagline: 'Your vast arcane library holds the answer to every mystery.', examples: ['Hermione (HP)', 'The Doctor (Doctor Who)'] },
+  'school-of-war': { tagline: 'Magic and martial prowess combine into devastating battle magic.', examples: ['Gandalf fighting Balrog', 'Saber (Fate)'] },
+};
+
+// Ancestry descriptions
+const ancestryInfo: Record<string, { tagline: string }> = {
+  'clank': { tagline: 'Mechanical beings of clockwork and steam, crafted for a purpose.' },
+  'drakona': { tagline: 'Dragon-blooded warriors with scales, breath weapons, and ancient pride.' },
+  'dwarf': { tagline: 'Stout and sturdy folk with a gift for craft and an iron will.' },
+  'elf': { tagline: 'Graceful and long-lived, attuned to magic and the natural world.' },
+  'faerie': { tagline: 'Tiny winged tricksters brimming with mischief and fey magic.' },
+  'faun': { tagline: 'Goat-legged revelers who live for joy, music, and celebration.' },
+  'firbolg': { tagline: 'Gentle forest giants who speak with animals and guard the wilds.' },
+  'fungril': { tagline: 'Mushroom folk who spread spores and share a collective memory.' },
+  'galapa': { tagline: 'Wise turtle-like beings who carry their homes on their backs.' },
+  'giant': { tagline: 'Towering humanoids of immense strength and legendary endurance.' },
+  'goblin': { tagline: 'Clever scavengers who turn junk into genius inventions.' },
+  'halfling': { tagline: 'Small but brave, with luck that defies all odds.' },
+  'human': { tagline: 'Versatile and ambitious, adapting to any challenge.' },
+  'infernis': { tagline: 'Fiend-touched beings with hellfire in their veins.' },
+  'katari': { tagline: 'Feline hunters with sharp senses and deadly grace.' },
+  'orc': { tagline: 'Proud warriors whose strength is matched by their honor.' },
+  'ribbet': { tagline: 'Amphibious frog-folk equally at home in water and on land.' },
+  'simiah': { tagline: 'Ape-like climbers with powerful builds and keen intellect.' },
+  'mixed-ancestry': { tagline: 'A unique blend of heritages, combining the best of both worlds.' },
+};
+
+// Community descriptions
+const communityInfo: Record<string, { tagline: string }> = {
+  'highborne': { tagline: 'Raised among nobility with privilege, education, and expectations.' },
+  'loreborne': { tagline: 'Scholars and keepers of ancient knowledge and secrets.' },
+  'orderborne': { tagline: 'Trained in discipline and duty, serving a greater cause.' },
+  'ridgeborne': { tagline: 'Mountain folk hardened by harsh peaks and thin air.' },
+  'seaborne': { tagline: 'Sailors and coastal dwellers who know the ocean\'s moods.' },
+  'slyborne': { tagline: 'Street-smart survivors who learned to thrive in the shadows.' },
+  'underborne': { tagline: 'Denizens of the deep earth, at home in endless darkness.' },
+  'wanderborne': { tagline: 'Nomads and travelers who call the open road home.' },
+  'wildborne': { tagline: 'Raised in untamed wilderness, one with nature\'s rhythms.' },
 };
 
 const STEPS: { key: Step; label: string }[] = [
@@ -241,7 +308,7 @@ export function CharacterCreatorPage() {
           {character.classData.subclasses.map(sub => {
             const imageUrl = getSubclassImage(sub.slug);
             const hasImage = !failedImages.has(sub.slug);
-            const foundation = sub.features.find(f => !f.type || f.type === 'foundation');
+            const info = subclassInfo[sub.slug];
 
             return (
               <button
@@ -260,14 +327,11 @@ export function CharacterCreatorPage() {
                 )}
                 <div className="card-body">
                   <h3>{sub.name}</h3>
-                  {sub.spellcastTrait && (
-                    <p className="card-trait">Spellcast: {sub.spellcastTrait}</p>
-                  )}
-                  {foundation && (
-                    <div className="card-feature">
-                      <strong>{foundation.name}</strong>
-                      <p>{foundation.description}</p>
-                    </div>
+                  {info && <p className="card-tagline">{info.tagline}</p>}
+                  {info?.examples && (
+                    <p className="card-examples">
+                      <span className="examples-label">Think:</span> {info.examples.join(', ')}
+                    </p>
                   )}
                 </div>
               </button>
@@ -288,6 +352,7 @@ export function CharacterCreatorPage() {
         {ancestries.map(anc => {
           const imageUrl = getAncestryImage(anc.slug);
           const hasImage = !failedImages.has(`ancestry-${anc.slug}`);
+          const info = ancestryInfo[anc.slug];
 
           return (
             <button
@@ -306,6 +371,7 @@ export function CharacterCreatorPage() {
               )}
               <div className="card-body">
                 <h3>{anc.name}</h3>
+                {info && <p className="card-tagline">{info.tagline}</p>}
               </div>
             </button>
           );
@@ -324,6 +390,7 @@ export function CharacterCreatorPage() {
         {communities.map(comm => {
           const imageUrl = getCommunityImage(comm.slug);
           const hasImage = !failedImages.has(`community-${comm.slug}`);
+          const info = communityInfo[comm.slug];
 
           return (
             <button
@@ -342,6 +409,7 @@ export function CharacterCreatorPage() {
               )}
               <div className="card-body">
                 <h3>{comm.name}</h3>
+                {info && <p className="card-tagline">{info.tagline}</p>}
               </div>
             </button>
           );
@@ -368,7 +436,7 @@ export function CharacterCreatorPage() {
                 onClick={() => handleWeaponSelect(weapon)}
               >
                 <h4>{weapon.name}</h4>
-                <p className="card-stats">{weapon.damage} {weapon.damageType}</p>
+                <p className="card-stats">{weapon.damage}</p>
                 <p className="card-trait">{weapon.trait} | {weapon.range}</p>
               </button>
             ))}
