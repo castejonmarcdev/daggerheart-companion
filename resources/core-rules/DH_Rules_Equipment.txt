@@ -1,0 +1,211 @@
+EQUIPMENT
+
+Your equipped weapons and armor are listed in the "Active Weapons" and "Active Armor" sections of your character sheet. You can only attack with weapons, benefit from armor, and gain features from items you have equipped. You can't equip weapons or armor with a higher tier than you.
+
+================================================================================
+WEAPONS
+================================================================================
+
+All weapons have: tier, trait, range, damage die, damage type, and burden. Some also have a feature.
+
+CATEGORY: Primary or Secondary. You can only equip up to one weapon of each category at a time.
+
+TRAIT: Specifies which trait to use when making an attack roll with it.
+
+RANGE: Maximum distance between attacker and target when attacking.
+
+DAMAGE: Size of damage dice you roll on successful attack. Roll dice equal to your Proficiency. Flat modifiers are added to total but not affected by Proficiency.
+
+DAMAGE TYPE: Physical (phy) or Magic (mag). Magic weapons can only be wielded by characters with a Spellcast trait.
+
+BURDEN: How many hands it occupies when equipped. Maximum burden is 2 hands.
+
+FEATURE: Special rule that stays in effect while weapon is equipped.
+
+THROWING: You can throw an equipped weapon at a target within Very Close range using Finesse. Once thrown, weapon is no longer equipped until retrieved.
+
+--------------------------------------------------------------------------------
+TIER 1 PRIMARY WEAPONS (LEVEL 1)
+--------------------------------------------------------------------------------
+
+PHYSICAL WEAPONS:
+| Name          | Trait     | Range      | Damage     | Burden     | Feature |
+|---------------|-----------|------------|------------|------------|---------|
+| Broadsword    | Agility   | Melee      | d8 phy     | One-Handed | Reliable: +1 to attack rolls |
+| Longsword     | Agility   | Melee      | d8+3 phy   | Two-Handed | - |
+| Battleaxe     | Strength  | Melee      | d10+3 phy  | Two-Handed | - |
+| Greatsword    | Strength  | Melee      | d10+3 phy  | Two-Handed | Massive: -1 Evasion; roll extra die, discard lowest |
+| Mace          | Strength  | Melee      | d8+1 phy   | One-Handed | - |
+| Warhammer     | Strength  | Melee      | d12+3 phy  | Two-Handed | Heavy: -1 to Evasion |
+| Dagger        | Finesse   | Melee      | d8+1 phy   | One-Handed | - |
+| Quarterstaff  | Instinct  | Melee      | d10+3 phy  | Two-Handed | - |
+| Cutlass       | Presence  | Melee      | d8+1 phy   | One-Handed | - |
+| Rapier        | Presence  | Melee      | d8 phy     | One-Handed | Quick: Mark Stress to target another creature |
+| Halberd       | Strength  | Very Close | d10+2 phy  | Two-Handed | Cumbersome: -1 to Finesse |
+| Spear         | Finesse   | Very Close | d10+2 phy  | Two-Handed | Cumbersome: -1 to Finesse |
+| Shortbow      | Agility   | Far        | d6+3 phy   | Two-Handed | - |
+| Crossbow      | Finesse   | Far        | d6+1 phy   | One-Handed | - |
+| Longbow       | Agility   | Very Far   | d8+3 phy   | Two-Handed | Cumbersome: -1 to Finesse |
+
+MAGIC WEAPONS (require Spellcast trait):
+| Name            | Trait     | Range      | Damage     | Burden     | Feature |
+|-----------------|-----------|------------|------------|------------|---------|
+| Arcane Gauntlets| Strength  | Melee      | d10+3 mag  | Two-Handed | - |
+| Hallowed Axe    | Strength  | Melee      | d8+1 mag   | One-Handed | - |
+| Glowing Rings   | Agility   | Very Close | d10+1 mag  | Two-Handed | - |
+| Hand Runes      | Instinct  | Very Close | d10 mag    | One-Handed | - |
+| Returning Blade | Finesse   | Close      | d8 mag     | One-Handed | Returning: Appears in hand after thrown |
+| Shortstaff      | Instinct  | Close      | d8+1 mag   | One-Handed | - |
+| Dualstaff       | Instinct  | Far        | d6+3 mag   | Two-Handed | - |
+| Scepter         | Presence  | Far        | d6 mag     | Two-Handed | Versatile: Also Presence, Melee, d8 |
+| Wand            | Knowledge | Far        | d6+1 mag   | One-Handed | - |
+| Greatstaff      | Knowledge | Very Far   | d6 mag     | Two-Handed | Powerful: Roll extra die, discard lowest |
+
+--------------------------------------------------------------------------------
+TIER 1 SECONDARY WEAPONS (LEVEL 1)
+--------------------------------------------------------------------------------
+
+| Name           | Trait    | Range      | Damage   | Burden     | Feature |
+|----------------|----------|------------|----------|------------|---------|
+| Shortsword     | Agility  | Melee      | d8 phy   | One-Handed | Paired: +2 primary damage in Melee |
+| Round Shield   | Strength | Melee      | d4 phy   | One-Handed | Protective: +1 to Armor Score |
+| Tower Shield   | Strength | Melee      | d6 phy   | One-Handed | Barrier: +2 Armor Score; -1 Evasion |
+| Small Dagger   | Finesse  | Melee      | d8 phy   | One-Handed | Paired: +2 primary damage in Melee |
+| Whip           | Presence | Very Close | d6 phy   | One-Handed | Startling: Mark Stress to push adversaries back |
+| Grappler       | Finesse  | Close      | d6 phy   | One-Handed | Hooked: On success, pull target to Melee |
+| Hand Crossbow  | Finesse  | Far        | d6+1 phy | One-Handed | - |
+
+--------------------------------------------------------------------------------
+WEAPON FEATURES GLOSSARY
+--------------------------------------------------------------------------------
+- Barrier: +Armor Score bonus; -1 Evasion
+- Brutal: Roll extra die when you roll max value on damage die
+- Cumbersome: -1 to Finesse
+- Deadly: Target marks additional HP on Severe damage
+- Heavy: -1 to Evasion
+- Hooked: Pull target to Melee on success
+- Massive: -1 Evasion; roll extra die, discard lowest
+- Paired: Bonus to primary weapon damage in Melee
+- Powerful: Roll extra die, discard lowest
+- Protective: Bonus to Armor Score
+- Quick: Mark Stress to target another creature in range
+- Reliable: +1 to attack rolls
+- Reloading: Roll d6 after attack; on 1, mark Stress to reload
+- Returning: Returns to hand after thrown
+- Scary: Target must mark Stress on successful attack
+- Versatile: Can use with alternate statistics
+
+================================================================================
+ARMOR
+================================================================================
+
+Every armor has: name, base damage thresholds, and base Armor Score. Some also have a feature.
+
+BASE ARMOR SCORE: How many Armor Slots it provides (max 12).
+BASE THRESHOLDS: Major / Severe thresholds before adding level.
+FEATURE: Special rule while armor is equipped.
+
+When you take damage, you can mark one Armor Slot to reduce Hit Points marked by one.
+If Armor Score is 0, you can't mark Armor Slots.
+
+WHILE UNARMORED: Base Armor Score = 0, Major threshold = level, Severe threshold = 2x level.
+
+You can swap weapons at no cost during rest; otherwise mark a Stress.
+You can only have one Active Armor. Can't equip armor while in danger.
+
+--------------------------------------------------------------------------------
+TIER 1 ARMOR (LEVEL 1)
+--------------------------------------------------------------------------------
+| Name               | Thresholds | Score | Feature |
+|--------------------|------------|-------|---------|
+| Gambeson Armor     | 5 / 11     | 3     | Flexible: +1 to Evasion |
+| Leather Armor      | 6 / 13     | 3     | - |
+| Chainmail Armor    | 7 / 15     | 4     | Heavy: -1 to Evasion |
+| Full Plate Armor   | 8 / 17     | 4     | Very Heavy: -2 Evasion; -1 Agility |
+
+--------------------------------------------------------------------------------
+TIER 2 ARMOR (LEVELS 2-4)
+--------------------------------------------------------------------------------
+| Name                    | Thresholds | Score | Feature |
+|-------------------------|------------|-------|---------|
+| Improved Gambeson       | 7 / 16     | 4     | Flexible: +1 to Evasion |
+| Improved Leather        | 9 / 20     | 4     | - |
+| Improved Chainmail      | 11 / 24    | 5     | Heavy: -1 to Evasion |
+| Improved Full Plate     | 13 / 28    | 5     | Very Heavy: -2 Evasion; -1 Agility |
+| Elundrian Chain         | 9 / 21     | 4     | Warded: Reduce magic damage by Armor Score |
+| Harrowbone Armor        | 9 / 21     | 4     | Resilient: On last slot, roll d6; on 6, reduce without marking |
+| Irontree Breastplate    | 9 / 20     | 4     | Reinforced: +2 thresholds when last slot marked |
+| Runetan Floating        | 9 / 20     | 4     | Shifting: Mark slot for disadvantage on attack against you |
+| Tyris Soft Armor        | 8 / 18     | 5     | Quiet: +2 to silent movement rolls |
+| Rosewild Armor          | 11 / 23    | 5     | Hopeful: Mark slot instead of spending Hope |
+
+--------------------------------------------------------------------------------
+ARMOR TIERS CONTINUE THROUGH TIER 4 (LEVELS 8-10)
+--------------------------------------------------------------------------------
+
+================================================================================
+COMBAT WHEELCHAIR (Optional Rules by Mark Thompson)
+================================================================================
+
+Three models available as Primary Weapons:
+
+LIGHT FRAME: Agility, Melee, d8 phy, One-Handed, Quick feature
+- Best for adventurers relying on speed and flexibility
+- Tiers: d8 -> d8+3 -> d8+6 -> d8+9
+
+HEAVY FRAME: Strength, Melee, d12+3 phy, Two-Handed, Heavy (-1 Evasion)
+- Best for adding weight to attacks
+- Tiers: d12+3 -> d12+6 -> d12+9 -> d12+12
+
+ARCANE FRAME: Spellcast, Far, d6 mag, One-Handed, Reliable (+1 attack)
+- Best for channeling spells through the chair
+- Tiers: d6 -> d6+3 -> d6+6 -> d6+9
+
+================================================================================
+GOLD
+================================================================================
+
+Gold is measured in: handfuls, bags, and chests (10 handfuls = 1 bag, 10 bags = 1 chest).
+
+When you fill all slots in a category and gain another in that category, mark a slot in the next category and clear all slots in current category.
+
+Maximum: 1 chest. Must spend or store excess gold.
+
+OPTIONAL RULE - GOLD COINS: 10 coins = 1 handful
+
+================================================================================
+LOOT
+================================================================================
+
+Loot comprises consumables and reusable items. To generate random loot:
+- Common: 1d12 or 2d12
+- Uncommon: 2d12 or 3d12
+- Rare: 3d12 or 4d12
+- Legendary: 4d12 or 5d12
+
+EXAMPLE LOOT ITEMS:
+- Premium Bedroll: Automatically clear a Stress during downtime
+- Speaking Orbs: Communicate across any distance
+- Gecko Gloves: Climb vertical surfaces and ceilings
+- Ring of Silence: Spend Hope for silent footsteps until next rest
+- Relics (various): +1 bonus to specific traits (can only carry one relic)
+- Infinite Bag: Pocket dimension storage that never runs out of space
+
+================================================================================
+CONSUMABLES
+================================================================================
+
+Can only be used once. Hold up to five of each. Using consumables doesn't require a roll unless required by GM.
+
+EXAMPLE CONSUMABLES:
+- Minor Health Potion: Clear 1d4 HP
+- Minor Stamina Potion: Clear 1d4 Stress
+- Health Potion: Clear 1d4+1 HP
+- Stamina Potion: Clear 1d4+1 Stress
+- Major Health Potion: Clear 1d4+2 HP
+- Major Stamina Potion: Clear 1d4+2 Stress
+- Trait Potions: +1 bonus to specific trait roll
+- Major Trait Potions: +1 bonus to trait until next rest
+- Varik Leaves: Immediately gain 2 Hope
+- Grindletooth Venom: Add d6 to next physical damage roll
+- Unstable Arcane Shard: 1d20 magic damage to group within Far range

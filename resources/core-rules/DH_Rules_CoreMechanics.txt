@@ -1,0 +1,221 @@
+CORE MECHANICS
+
+================================================================================
+FLOW OF THE GAME
+================================================================================
+Daggerheart is a conversation. The GM describes fictional scenarios involving the PCs, and the players take turns describing how their characters react. The goal is to collaboratively tell a satisfying story.
+
+CORE GAMEPLAY LOOP:
+1. SET THE SCENE: The GM describes a scenario, establishing surroundings, dangers, NPCs, or important details.
+2. ASK AND ANSWER QUESTIONS: Players ask clarifying questions; GM responds or asks questions of their own.
+3. BUILD ON THE FICTION: Players find opportunities to take action. If no chance of failure (or failure would be boring), they automatically succeed. Otherwise, GM calls for an action roll.
+4. GO BACK TO STEP 1: Process repeats until scene ends.
+
+THE SPOTLIGHT:
+The spotlight represents the table's attention and the immediate focus of the narrative. It moves organically as scenes unfold unless a mechanical trigger determines where it goes. When a player fails an action roll, the mechanics prompt the GM to seize the spotlight.
+
+TURN ORDER & ACTION ECONOMY:
+There is no explicit initiative mechanic. Characters don't have a set number of actions. A player with the spotlight describes what their character does, then the spotlight swings to whoever:
+A. The fiction would naturally turn it toward
+B. Hasn't had focus in a while
+C. A triggered mechanic puts it on
+
+================================================================================
+ACTION ROLLS
+================================================================================
+Any move where success would be trivial or failure would be boring automatically succeeds. Difficult or risky moves trigger an action roll.
+
+DUALITY DICE:
+All action rolls require a pair of d12s called Duality Dice - one representing Hope and one representing Fear.
+
+PROCEDURE:
+1. PICK AN APPROPRIATE TRAIT: GM tells player which character trait applies
+2. DETERMINE THE DIFFICULTY: GM sets Difficulty based on scenario
+3. APPLY EXTRA DICE AND MODIFIERS: Player decides on Experiences, advantage, Rally dice, etc.
+4. ROLL THE DICE: Roll Duality Dice, sum results, add modifiers, announce as "[total] with [Hope/Fear]"
+5. RESOLVE THE OUTCOME: Work together to resolve the outcome
+
+OUTCOMES:
+- SUCCESS WITH HOPE: Total meets/beats Difficulty AND Hope Die is higher. You succeed and gain a Hope.
+- SUCCESS WITH FEAR: Total meets/beats Difficulty AND Fear Die is higher. You succeed with a cost/complication, GM gains a Fear.
+- FAILURE WITH HOPE: Total is less than Difficulty AND Hope Die is higher. You fail with minor consequence, gain a Hope, spotlight swings to GM.
+- FAILURE WITH FEAR: Total is less than Difficulty AND Fear Die is higher. You fail with major consequence, GM gains a Fear, spotlight swings to GM.
+- CRITICAL SUCCESS: Duality Dice show matching results. You automatically succeed with a bonus, gain a Hope, and clear a Stress. If an attack roll, deal critical damage.
+
+FAILING FORWARD: Every roll changes the scene in some way. There is no roll where "nothing happens."
+
+================================================================================
+SPECIAL ROLLS
+================================================================================
+
+TRAIT ROLLS:
+An action roll that specifies which character trait applies. Referenced as "[Trait] Roll (Difficulty)" (e.g., "Agility Roll (12)").
+
+SPELLCAST ROLLS:
+Trait rolls requiring your Spellcast trait (determined by subclass). Made when using features that require one. Spellcast Rolls that can damage a target are also attack rolls.
+
+REACTION ROLLS:
+Made in response to an attack or hazard. They don't generate Hope or Fear, don't trigger additional GM moves, and others can't help you with Help an Ally. Critical success on a reaction roll ignores all effects including damage.
+
+GROUP ACTION ROLLS:
+When multiple PCs take action together, one leads the action. Others make reaction rolls. The leader gains +1 for each success and -1 for each failure.
+
+TAG TEAM ROLLS:
+Once per session, spend 3 Hope to initiate. Both players make separate action rolls, then choose one roll to apply to both actions. On success, both roll damage and add totals together.
+
+ADVANTAGE & DISADVANTAGE:
+- Advantage: Roll a d6 and add its result to your total.
+- Disadvantage: Roll a d6 and subtract its result from your total.
+They cancel each other out one-for-one.
+
+================================================================================
+HOPE & FEAR
+================================================================================
+
+HOPE:
+Every PC starts with 2 Hope. Maximum of 6 Hope. Carries over between sessions.
+
+Players can spend Hope to:
+- HELP AN ALLY: Roll an advantage die for an ally's action roll (highest result is added)
+- UTILIZE AN EXPERIENCE: Add Experience modifier to the roll
+- INITIATE A TAG TEAM ROLL: Spend 3 Hope
+- ACTIVATE A HOPE FEATURE: Spend specified amount (Class Hope features cost 3 Hope)
+
+FEAR:
+GM gains Fear whenever a player rolls with Fear. Can have up to 12 Fear. Carries over between sessions.
+GM spends Fear to make or enhance GM moves, or use Fear Features.
+
+================================================================================
+COMBAT
+================================================================================
+
+EVASION:
+Represents ability to avoid attacks. Any roll made against a PC has Difficulty equal to the target's Evasion. Base Evasion determined by class, modified by cards, equipment, conditions, etc.
+
+STRESS:
+Represents mental, physical, and emotional strain. Every PC starts with 6 Stress slots.
+When you mark your last Stress, you become Vulnerable until you clear at least 1 Stress.
+When you must mark Stress but can't, you mark 1 HP instead.
+
+HIT POINTS & DAMAGE THRESHOLDS:
+Hit Points (HP) represent ability to withstand physical injury. When taking damage:
+- SEVERE: Damage at or above Severe threshold = mark 3 HP
+- MAJOR: Damage at or above Major threshold but below Severe = mark 2 HP
+- MINOR: Damage below Major threshold = mark 1 HP
+- If damage is reduced to 0 or less, no HP is marked.
+
+Damage thresholds = Level + equipped armor's Base Thresholds
+
+OPTIONAL RULE - MASSIVE DAMAGE: Damage equal to twice Severe threshold = mark 4 HP instead of 3.
+
+ATTACKING:
+- ATTACK ROLLS: Action roll intended to inflict harm. Trait specified by weapon or spell. Difficulty equals target's Difficulty or Evasion.
+- DAMAGE ROLLS: On successful attack, roll damage as "xdy+[modifier]". Weapon damage dice rolled = Proficiency. Spellcast damage dice = Spellcast trait value.
+- CRITICAL DAMAGE: On critical success, add maximum possible dice result to final total (e.g., 2d8+1 becomes 2d8+1+16).
+- DAMAGE TYPES: Physical (phy) or Magic (mag). Mundane weapons deal physical, spells deal magic.
+
+RESISTANCE, IMMUNITY, AND DIRECT DAMAGE:
+- Resistance: Reduce incoming damage of that type by half before comparing to thresholds
+- Immunity: Ignore incoming damage of that type
+- Direct damage: Can't be reduced by marking Armor Slots
+
+================================================================================
+MAPS, RANGE, AND MOVEMENT
+================================================================================
+
+RANGES (assuming 1 inch = 5 feet):
+- MELEE: Close enough to touch, up to a few feet
+- VERY CLOSE: 5-10 feet. Can move into Melee as part of action. (2-3 inches on map)
+- CLOSE: 10-30 feet. Can move into Melee as part of action. (5-6 inches on map)
+- FAR: 30-100 feet. Must make Agility Roll to safely move into Melee. (11-12 inches on map)
+- VERY FAR: 100-300 feet. Must make Agility Roll to safely move into Melee. (Beyond Far on map)
+- OUT OF RANGE: Beyond Very Far, usually can't be targeted.
+
+OPTIONAL RULE - DEFINED RANGES (using 1-inch grid):
+- Melee: 1 square
+- Very Close: 3 squares
+- Close: 6 squares
+- Far: 12 squares
+- Very Far: 13+ squares
+
+AREA OF EFFECT: All targets must be within Very Close range of a single origin point within effect's range.
+
+LINE OF SIGHT & COVER: Ranged attacker must have line of sight. Partial obstruction = cover (attacks have disadvantage). Total obstruction = no line of sight.
+
+================================================================================
+CONDITIONS
+================================================================================
+
+STANDARD CONDITIONS:
+- HIDDEN: Out of sight from all enemies, location unknown. Rolls against Hidden creature have disadvantage. Cleared when seen, move into sight, or make an attack.
+- RESTRAINED: Can't move, but can take actions from current position.
+- VULNERABLE: All rolls targeting the creature have advantage.
+
+TEMPORARY CONDITIONS: Cleared by making a successful action roll using appropriate trait.
+
+SPECIAL CONDITIONS: Only cleared when specific requirements are met (stated in the effect text).
+
+================================================================================
+DOWNTIME
+================================================================================
+
+SHORT REST (about 1 hour in-game):
+- Move domain cards between loadout and vault for free
+- Choose twice from: Tend to Wounds (clear 1d4+Tier HP), Clear Stress (1d4+Tier), Repair Armor (1d4+Tier slots), Prepare (gain 1 Hope, or 2 Hope if with party members)
+- GM gains 1d4 Fear
+
+LONG REST (several in-game hours):
+- Move domain cards between loadout and vault for free
+- Choose twice from: Tend to All Wounds (clear all HP), Clear All Stress, Repair All Armor, Prepare, Work on a Project (advance countdown)
+- GM gains 1d4 + number of PCs Fear, can advance a long-term countdown
+
+If three short rests are taken in a row, next rest must be a long rest.
+Interrupted short rest = no benefits. Interrupted long rest = short rest benefits only.
+
+================================================================================
+DEATH
+================================================================================
+
+When a PC marks their last Hit Point, they must make a death move:
+
+- BLAZE OF GLORY: Embrace death. Take one final action that automatically critically succeeds (with GM approval), then you die.
+
+- AVOID DEATH: Drop unconscious. Work with GM to describe how situation worsens. Can't move, act, or be targeted. Return to consciousness when ally clears 1+ HP or after long rest. Roll Hope Die - if equal to or less than your level, gain a scar (permanently cross out a Hope slot). If you ever cross out your last Hope slot, your character's journey ends.
+
+- RISK IT ALL: Roll Duality Dice. If Hope Die is higher, stay on feet and clear HP or Stress equal to Hope Die value. If Fear Die is higher, you die. If matching results, stay up and clear all HP and Stress.
+
+================================================================================
+LEVELING UP
+================================================================================
+
+TIERS:
+- Tier 1: Level 1 only
+- Tier 2: Levels 2-4
+- Tier 3: Levels 5-7
+- Tier 4: Levels 8-10
+
+TIER ACHIEVEMENTS:
+- Level 2: Gain new Experience at +2, increase Proficiency by 1
+- Level 5: Gain new Experience at +2, increase Proficiency by 1, clear any marked traits
+- Level 8: Gain new Experience at +2, increase Proficiency by 1, clear any marked traits
+
+LEVEL UP STEPS:
+1. Take any applicable tier achievements
+2. Choose any two advancements from your tier or below
+3. Increase all damage thresholds by 1
+4. Acquire a new domain card at your level or lower
+
+MULTICLASSING (available at Level 5+):
+Choose an additional class, gain access to one of its domains, acquire its class feature. Take multiclass module and foundation card from one of its subclasses.
+
+================================================================================
+ADDITIONAL RULES
+================================================================================
+
+- ROUNDING: Always round up unless otherwise specified
+- REROLLING DICE: Take the new result unless feature says otherwise
+- INCOMING DAMAGE: Total damage from single attack before Armor Slots marked
+- SIMULTANEOUS EFFECTS: Person in control decides resolution order
+- STACKING EFFECTS: All effects stack except conditions and advantage/disadvantage
+- SPENDING RESOURCES: Can't spend Hope or mark Stress multiple times on the same feature for the same roll
+- USING FEATURES AFTER A ROLL: Can use after GM declares success/fail, but not after consequences unfold or another roll is made

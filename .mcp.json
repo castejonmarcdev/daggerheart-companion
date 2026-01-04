@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "daggerheart": {
+      "command": "node",
+      "args": ["C:/src/Daggerheart/mcp-server/dist/index.js"]
+    }
+  }
+}

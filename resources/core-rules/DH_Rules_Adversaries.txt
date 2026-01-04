@@ -1,0 +1,224 @@
+ADVERSARIES AND ENVIRONMENTS
+
+================================================================================
+ADVERSARY STAT BLOCKS
+================================================================================
+
+All information required to run an adversary is contained in their stat block:
+
+NAME: Unique identifier. Abilities affecting adversaries with a certain name include all adversaries using that stat block.
+
+TIER: Designed to oppose PCs of a certain tier. Adjust stats if using adversaries from different tiers.
+
+TYPE: The role they play in conflict:
+- BRUISERS: Tough; deliver powerful attacks
+- HORDES: Groups of identical creatures acting together as a single unit
+- LEADERS: Command and summon other adversaries
+- MINIONS: Easily dispatched but dangerous in numbers
+- RANGED: Fragile in close encounters but deal high damage at range
+- SKULKS: Maneuver and exploit opportunities to ambush opponents
+- SOCIALS: Present challenges around conversation instead of combat
+- SOLOS: Present a formidable challenge to a whole party
+- STANDARDS: Representative of their fictional group
+- SUPPORTS: Enhance their allies and disrupt their opponents
+
+DESCRIPTION: Narrative description of the adversary
+
+MOTIVES & TACTICS: Goals and combat behaviors
+
+DIFFICULTY: The Difficulty of any roll made against the adversary
+
+DAMAGE THRESHOLDS, HIT POINTS, AND STRESS: Function the same as for PCs. Listed as "Threshold: Major/Severe"
+
+ATTACK MODIFIER: Bonus or penalty applied to attack rolls
+
+STANDARD ATTACK: Primary mode of inflicting harm (name, range, damage). Using this is a GM move.
+
+EXPERIENCE (OPTIONAL): GM can spend Fear to add to attack roll or increase Difficulty of rolls against them.
+
+FEATURES: Three kinds:
+- ACTIONS: Special attack or unique action when spotlighted
+- REACTIONS: Effects that trigger regardless of spotlight
+- PASSIVES: Abilities that remain in effect by default
+
+FEAR FEATURES: High-impact effects that cost a Fear to activate.
+
+================================================================================
+ADVERSARY STAT BLOCK BENCHMARKS BY TIER
+================================================================================
+
+TIER 1 (LEVEL 1):
+- Attack Modifier: +1
+- Damage Dice: 1d6+2 to 1d12+4
+- Difficulty: 11
+- Damage Thresholds: Major 7 / Severe 12
+
+TIER 2 (LEVELS 2-4):
+- Attack Modifier: +2
+- Damage Dice: 2d6+3 to 2d12+4
+- Difficulty: 14
+- Damage Thresholds: Major 10 / Severe 20
+
+TIER 3 (LEVELS 5-7):
+- Attack Modifier: +3
+- Damage Dice: 3d8+3 to 3d12+5
+- Difficulty: 17
+- Damage Thresholds: Major 20 / Severe 32
+
+TIER 4 (LEVELS 8-10):
+- Attack Modifier: +4
+- Damage Dice: 4d8+10 to 4d12+15
+- Difficulty: 20
+- Damage Thresholds: Major 25 / Severe 45
+
+================================================================================
+EXAMPLE ADVERSARY FEATURES
+================================================================================
+
+ACTIONS:
+- Haymaker: Make an attack against a target within Very Close range. On success, deal X direct physical damage.
+- Shredding Strike: Make an attack within Very Close range. On success, deal X physical damage and target must mark an Armor Slot without gaining its benefit.
+- More Where That Came From: Summon additional adversaries who appear at Far range.
+
+REACTIONS:
+- Heavy Hitter: When this adversary deals damage with a standard attack, spend a Fear to gain +X bonus to damage.
+- Team-Up: When another adversary within Very Close range deals X damage, mark a Stress to make a standard attack against that same creature.
+- Momentum: When this adversary makes a successful attack against a PC, you gain a Fear.
+
+PASSIVES:
+- Horde (X): When the Horde has marked half or more HP, standard attack deals X damage instead.
+- Minion (X): Defeated when taking any damage. For every X damage dealt, defeat an additional Minion in range.
+- Relentless (X): Can be spotlighted up to X times per GM turn. Spend Fear as usual.
+- Slow: Can't act when first spotlighted. Place a token. On next spotlight, clear token and act.
+- Arcane Form: Resistant to magic damage.
+- Armored Carapace: When taking physical damage, reduce it by X.
+
+FEAR FEATURES:
+- Explosion: Spend a Fear to erupt in a fiery explosion. Make an attack against all targets within Close range. Targets take 1d8 magic damage and are knocked back to Far range.
+
+================================================================================
+BUILDING BALANCED ENCOUNTERS
+================================================================================
+
+Start with: [(3 x number of PCs in combat) + 2] Battle Points
+
+ADJUSTMENTS:
+- -1 for an easier or shorter fight
+- -2 if using 2+ Solo adversaries
+- -2 if adding +1d4 (or static +2) to all adversaries' damage rolls
+- +1 if choosing an adversary from a lower tier
+- +1 if not including any Bruisers, Hordes, Leaders, or Solos
+- +2 for a harder or longer fight
+
+SPENDING BATTLE POINTS:
+- 1 point: Each Social or Support adversary
+- 1 point: Each group of Minions equal to party size
+- 2 points: Each Horde, Ranged, Skulk, or Standard adversary
+- 3 points: Each Leader adversary
+- 4 points: Each Bruiser adversary
+- 5 points: Each Solo adversary
+
+DEFEATED ADVERSARIES:
+When an adversary marks their last Hit Point, they are defeated: incapacitated, tied up, routed, killed, or anything else the table decides makes sense.
+
+================================================================================
+COUNTDOWNS
+================================================================================
+
+Countdowns represent a period of time or series of events preceding a future effect. Begins at a starting value and advances by 1 until reaching 0, which triggers the effect.
+
+STANDARD COUNTDOWNS: Advance every time a player makes an action roll. "Countdown [n]" means standard countdown with starting value of n.
+
+DYNAMIC COUNTDOWNS: Advance by up to 3 depending on action roll outcomes.
+
+| Roll Result        | Progress Countdown | Consequence Countdown |
+|--------------------|--------------------|-----------------------|
+| Failure with Fear  | No advancement     | Tick down 3           |
+| Failure with Hope  | No advancement     | Tick down 2           |
+| Success with Fear  | Tick down 1        | Tick down 1           |
+| Success with Hope  | Tick down 2        | No advancement        |
+| Critical Success   | Tick down 3        | No advancement        |
+
+ADVANCED COUNTDOWN FEATURES:
+- Randomized starting values
+- Loop countdowns that reset after triggering
+- Increasing/Decreasing countdowns that change starting value each loop
+- Linked progress and consequence countdowns
+- Long-term countdowns that advance after rests instead of action rolls
+
+================================================================================
+EXAMPLE TIER 1 ADVERSARIES
+================================================================================
+
+ACID BURROWER (Solo)
+A horse-sized insect with digging claws and acidic blood.
+Motives & Tactics: Burrow, drag away, feed, reposition
+Difficulty: 14 | Thresholds: 8/15 | HP: 8 | Stress: 3
+ATK: +3 | Claws: Very Close | 1d12+2 phy
+Experience: Tremor Sense +2
+Features:
+- Relentless (3): Can be spotlighted up to 3 times per GM turn
+- Earth Eruption: Burst out of ground, knock over nearby creatures
+- Spit Acid: Attack all targets in front within Close range
+- Acid Bath: When taking Severe damage, bathe nearby creatures in acid
+
+BEAR (Bruiser)
+A large bear with thick fur and powerful claws.
+Difficulty: 14 | Thresholds: 9/17 | HP: 7 | Stress: 2
+ATK: +1 | Claws: Melee | 1d8+3 phy
+Experience: Ambusher +3, Keen Senses +2
+Features:
+- Overwhelming Force: Targets marking HP are knocked back to Very Close
+- Bite: Restrain target with powerful bite
+- Momentum: Gain a Fear on successful attack
+
+CONSTRUCT (Solo)
+A roughly humanoid being of stone and steel, animated by magic.
+Difficulty: 13 | Thresholds: 7/15 | HP: 9 | Stress: 4
+ATK: +4 | Fist Slam: Melee | 1d20 phy
+Features:
+- Relentless (2): Can be spotlighted up to 2 times per GM turn
+
+================================================================================
+TIER 1 ADVERSARY LIST
+================================================================================
+Acid Burrower, Archer Guard, Bear, Bladed Guard, Brawny Zombie, Cave Ogre, Construct, Courtier, Deeproot Defender, Dire Wolf, Giant Mosquitoes, Giant Rat, Giant Scorpion, Glass Snake, Green Ooze, Harrier, Head Guard, Jagged Knife Bandit/Hexer/Kneebreaker/Lackey/Lieutenant/Shadow/Sniper, Merchant, Minor Chaos Elemental, Minor Fire Elemental, Minor Demon, Minor Treant, Patchwork Zombie Hulk, Petty Noble, Pirate Captain/Raiders/Tough, Red Ooze, Rotted Zombie, Sellsword, Shambling Zombie, Skeleton Archer/Dredge/Knight/Warrior, Spellblade, Swarm of Rats, Sylvan Soldier, Tangle Bramble (Swarm), Tiny Green/Red Ooze, Weaponmaster, Young Dryad, Zombie Pack
+
+================================================================================
+TIER 2 ADVERSARY LIST (Levels 2-4)
+================================================================================
+Apprentice Assassin, Archer Squadron, Assassin Poisoner, Battle Box, Chaos Skull, Conscript, Courtesan, Cult Adept/Fang/Initiate, Demonic Hound Pack, Electric Eels, Elite Soldier, Failed Experiment, Giant Beastmaster/Brawler/Eagle/Recruit, Gorgon, Juvenile Flickerfly, Knight of the Realm, Masked Thief, Master Assassin, Merchant Baron, Minotaur Wrecker, Mortal Hunter, Royal Advisor, Secret-Keeper, Shark, Siren, Spectral Archer/Captain/Guardian, Spy, Stonewraith, War Wizard
+
+================================================================================
+TIER 3 ADVERSARY LIST (Levels 5-7)
+================================================================================
+Adult Flickerfly, Demon of Avarice/Despair/Hubris/Jealousy/Wrath, Dire Bat, Dryad, Elemental Spark, Greater Earth/Water Elemental, Head Vampire, Huge Green Ooze, Hydra, Monarch, Oak Treant, Stag Knight, Treant Sapling, Vampire, Vault Guardian Gaoler/Sentinel/Turret, Young Ice Dragon
+
+================================================================================
+TIER 4 ADVERSARY LIST (Levels 8-10)
+================================================================================
+Arch-Necromancer, Fallen Shock Troop/Sorcerer/Warlord variants (Realm-Breaker, Undefeated Champion), Hallowed Archer/Soldier, High Seraph, Kraken, Oracle of Doom, Outer Realms Abomination/Corruptor/Thrall, Perfected Zombie, Volcanic Dragon variants (Obsidian Predator, Molten Scourge, Ashen Tyrant), Zombie Legion
+
+================================================================================
+OPTIONAL GM MECHANICS
+================================================================================
+
+FATE ROLLS:
+When leaving an outcome entirely up to chance, establish stakes and have a player roll one of their Duality Dice and interpret the result.
+
+FALLING AND COLLISION DAMAGE:
+- Very Close range fall: 1d10+3 physical damage
+- Close range fall: 1d20+5 physical damage
+- Far or Very Far range fall: 1d100+15 physical damage, or death at GM's discretion
+- Collision at dangerous speed: 1d20+5 direct physical damage
+
+MOVING AND FIGHTING UNDERWATER:
+- Attack rolls while underwater have disadvantage
+- For creatures that can't breathe underwater: Use standard countdown (3) to track breath
+- Advance countdown when PC takes action; GM can advance extra on failed rolls
+- After countdown ends, PC marks Stress for each action
+
+CONFLICT BETWEEN PCS:
+- Discuss situation with both players before rolling
+- Attack roll: Attacker rolls against defender's Evasion
+- Other action rolls: Instigator makes action roll, target makes reaction roll. Instigator must beat reaction roll total as Difficulty.

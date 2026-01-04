@@ -1,0 +1,291 @@
+CLASSES
+
+A class is a role-based archetype that determines a PC's:
+- Access to Domains: Each class grants access to two domains; players choose cards from these domains during character creation and when leveling up.
+- Starting Evasion and Hit Points (HP)
+- Class Feature(s)
+- Starting Items
+- Class Hope Feature, a class feature that costs 3 Hope to activate.
+
+There are 9 classes in Daggerheart: Bard, Druid, Guardian, Ranger, Rogue, Seraph, Sorcerer, Warrior, and Wizard.
+
+SUBCLASSES
+Each class is divided into two subclasses, each of which further defines and highlights one aspect of its class archetype. Your chosen subclass grants:
+- Spellcast Trait: the trait used on all Spellcast rolls.
+- Foundation Feature: a unique starting feature that establishes the identity and strengths of the subclass.
+- Specialization Feature: an advanced feature that can be gained on level up.
+- Mastery Feature: The most powerful feature, which can be gained at higher levels.
+
+================================================================================
+BARD
+================================================================================
+Bards are masters of captivation and specialize in performance types including singing, playing instruments, weaving tales, or telling jokes. They thrive in social situations.
+
+DOMAINS: Grace & Codex
+STARTING EVASION: 10
+STARTING HIT POINTS: 5
+CLASS ITEMS: A romance novel or a letter never opened
+
+BARD'S HOPE FEATURE
+Make a Scene: Spend 3 Hope to temporarily Distract a target within Close range, giving them a -2 penalty to their Difficulty.
+
+CLASS FEATURE
+Rally: Once per session, describe how you rally the party and give yourself and each ally a Rally Die. At level 1, your Rally Die is a d6. A PC can spend their Rally Die to roll it, adding the result to their action roll, reaction roll, damage roll, or to clear Stress equal to the result. At level 5, your Rally Die increases to a d8.
+
+SUBCLASSES: Troubadour or Wordsmith
+
+TROUBADOUR (Spellcast: Presence)
+- Gifted Performer: Play three types of songs once each per long rest
+- Maestro (Specialization): When you give a Rally Die to an ally, they can gain a Hope or clear a Stress
+- Virtuoso (Mastery): Perform each song twice per long rest
+
+WORDSMITH (Spellcast: Presence)
+- Rousing Speech: Once per long rest, all allies within Far range clear 2 Stress
+- Heart of a Poet: Spend a Hope to add d4 to action rolls to impress/persuade/offend
+- Eloquent (Specialization): Once per session, provide various aids to allies
+- Epic Poetry (Mastery): Rally Die increases to d10
+
+================================================================================
+DRUID
+================================================================================
+Druids learn from and protect the magic of the wilderness. They can transform into beasts and shape nature itself.
+
+DOMAINS: Sage & Arcana
+STARTING EVASION: 10
+STARTING HIT POINTS: 6
+CLASS ITEMS: A small bag of rocks and bones or a strange pendant
+
+DRUID'S HOPE FEATURE
+Evolution: Spend 3 Hope to transform into Beastform without marking Stress. Choose one trait to raise by +1 until you drop out.
+
+CLASS FEATURES
+- Beastform: Mark a Stress to transform into a creature from the Beastform list
+- Wildtouch: Perform harmless nature effects at will
+
+SUBCLASSES: Warden of the Elements or Warden of Renewal
+
+WARDEN OF THE ELEMENTS (Spellcast: Instinct)
+- Elemental Incarnation: Channel Fire, Earth, Water, or Air with unique effects
+- Elemental Aura (Specialization): Assume an aura matching your element
+- Elemental Dominion (Mastery): Further embody your element
+
+WARDEN OF RENEWAL (Spellcast: Instinct)
+- Clarity of Nature: Create a space of serenity to clear Stress
+- Regeneration: Spend 3 Hope to clear 1d4 Hit Points on a touched creature
+- Warden's Protection (Specialization): Clear 2 HP on 1d4 allies
+- Defender (Mastery): Reduce ally damage while in Beastform
+
+================================================================================
+GUARDIAN
+================================================================================
+Guardians are known for fighting with remarkable ferocity even against overwhelming odds, defending their cohort above all else.
+
+DOMAINS: Valor and Blade
+STARTING EVASION: 9
+STARTING HIT POINTS: 7
+CLASS ITEMS: A totem from your mentor or a secret key
+
+GUARDIAN'S HOPE FEATURE
+Frontline Tank: Spend 3 Hope to clear 2 Armor Slots.
+
+CLASS FEATURE
+Unstoppable: Once per long rest, become Unstoppable with an Unstoppable Die (d4 at level 1, d6 at level 5). While Unstoppable:
+- Reduce physical damage severity by one threshold
+- Add Unstoppable Die value to damage roll
+- Can't be Restrained or Vulnerable
+
+SUBCLASSES: Stalwart or Vengeance
+
+STALWART
+- Unwavering: +1 to damage thresholds
+- Iron Will: Mark additional Armor Slot to reduce severity
+- Unrelenting (Specialization): +2 to damage thresholds
+- Undaunted (Mastery): +3 to damage thresholds, Loyal Protector
+
+VENGEANCE
+- At Ease: Additional Stress slot
+- Revenge: Mark 2 Stress to force attacker to mark a Hit Point
+- Act of Reprisal (Specialization): +1 Proficiency against damaging adversary
+- Nemesis (Mastery): Prioritize an adversary for special benefits
+
+================================================================================
+RANGER
+================================================================================
+Rangers are highly skilled hunters who become sly tacticians, pursuing quarry with cunning and patience.
+
+DOMAINS: Bone & Sage
+STARTING EVASION: 12
+STARTING HIT POINTS: 6
+CLASS ITEMS: A trophy from your first kill or a seemingly broken compass
+
+RANGER'S HOPE FEATURE
+Hold Them Off: Spend 3 Hope when you succeed on an attack to use that roll against two additional adversaries.
+
+CLASS FEATURE
+Ranger's Focus: Spend a Hope to make a target your Focus, gaining:
+- Know their precise direction
+- Target must mark Stress when you deal damage
+- Can reroll Duality Dice on failed attacks against them
+
+SUBCLASSES: Beastbound or Wayfinder
+
+BEASTBOUND (Spellcast: Agility)
+- Companion: Animal companion that stays by your side
+- Expert Training (Specialization): Additional level-up option for companion
+- Advanced Training (Mastery): Two additional level-up options, Loyal Friend
+
+WAYFINDER (Spellcast: Agility)
+- Ruthless Predator: Mark Stress for +1 Proficiency
+- Path Forward: Identify shortest path to visited locations
+- Elusive Predator (Specialization): +2 Evasion against Focus attacks
+- Apex Predator (Mastery): Remove Fear from GM pool on successful Focus attack
+
+================================================================================
+ROGUE
+================================================================================
+Rogues are scoundrels who move through the world anonymously, utilizing sharp wits and blades.
+
+DOMAINS: Midnight & Grace
+STARTING EVASION: 12
+STARTING HIT POINTS: 6
+CLASS ITEMS: A set of forgery tools or a grappling hook
+
+ROGUE'S HOPE FEATURE
+Rogue's Dodge: Spend 3 Hope to gain +2 Evasion until attacked successfully or next rest.
+
+CLASS FEATURES
+- Cloaked: Enhanced Hidden condition
+- Sneak Attack: Add d6s equal to tier to damage while Cloaked or ally is near target
+
+SUBCLASSES: Nightwalker or Syndicate
+
+NIGHTWALKER (Spellcast: Finesse)
+- Shadow Stepper: Move from shadow to shadow, becoming Cloaked
+- Dark Cloud (Specialization): Create temporary dark cloud
+- Fleeting Shadow (Mastery): +1 Evasion, extended Shadow Stepper range
+
+SYNDICATE (Spellcast: Finesse)
+- Well-Connected: Know someone in every prominent location
+- Contacts Everywhere (Specialization): Call on shady contacts once per session
+- Reliable Backup (Mastery): Use contacts three times per session
+
+================================================================================
+SERAPH
+================================================================================
+Seraphs are divine fighters and healers imbued with sacred purpose.
+
+DOMAINS: Splendor & Valor
+STARTING EVASION: 9
+STARTING HIT POINTS: 7
+CLASS ITEMS: A bundle of offerings or a sigil of your god
+
+SERAPH'S HOPE FEATURE
+Life Support: Spend 3 Hope to clear a Hit Point on an ally within Close range.
+
+CLASS FEATURE
+Prayer Dice: Roll d4s equal to Spellcast trait at session start. Spend to aid yourself or allies: reduce damage, add to rolls, or gain Hope.
+
+SUBCLASSES: Divine Wielder or Winged Sentinel
+
+DIVINE WIELDER (Spellcast: Strength)
+- Spirit Weapon: Equipped Melee/Very Close weapon can attack at Close range
+- Sparing Touch: Clear 2 HP or 2 Stress once per long rest
+- Devout (Specialization): Roll extra Prayer Die, use Sparing Touch twice
+- Sacred Resonance (Mastery): Double matching damage dice
+
+WINGED SENTINEL (Spellcast: Strength)
+- Wings of Light: Fly, carry creatures, deal extra damage
+- Ethereal Visage (Specialization): Advantage on Presence Rolls while flying
+- Ascendant (Mastery): +4 to Severe threshold
+- Power of the Gods (Mastery): Deal 1d12 extra damage while flying
+
+================================================================================
+SORCERER
+================================================================================
+Sorcerers cultivate and control innate magical power passed down through families.
+
+DOMAINS: Arcana & Midnight
+STARTING EVASION: 10
+STARTING HIT POINTS: 6
+CLASS ITEMS: A whispering orb or a family heirloom
+
+SORCERER'S HOPE FEATURE
+Volatile Magic: Spend 3 Hope to reroll any damage dice on magic damage attacks.
+
+CLASS FEATURES
+- Arcane Sense: Sense magical people and objects within Close range
+- Minor Illusion: Create visual illusions within Close range
+- Channel Raw Power: Place domain card in vault to gain Hope or enhance damage
+
+SUBCLASSES: Elemental Origin or Primal Origin
+
+ELEMENTAL ORIGIN (Spellcast: Instinct)
+- Elementalist: Choose air, earth, fire, lightning, or water; shape element
+- Natural Evasion (Specialization): Add d6 to Evasion against attacks
+- Transcendence (Mastery): Transform into physical manifestation of element
+
+PRIMAL ORIGIN (Spellcast: Instinct)
+- Manipulate Magic: Mark Stress after spells to extend reach, add bonuses, etc.
+- Enchanted Aid (Specialization): Roll d8 when helping ally with Spellcast
+- Arcane Charge (Mastery): Gather magical energy to enhance capabilities
+
+================================================================================
+WARRIOR
+================================================================================
+Warriors master weapons and violence through training and dedication, understanding the importance of an agile body and mind.
+
+DOMAINS: Blade & Bone
+STARTING EVASION: 11
+STARTING HIT POINTS: 6
+CLASS ITEMS: The drawing of a lover or a sharpening stone
+
+WARRIOR'S HOPE FEATURE
+No Mercy: Spend 3 Hope to gain +1 to attack rolls until next rest.
+
+CLASS FEATURES
+- Attack of Opportunity: Reaction roll when adversary attempts to leave Melee range
+- Combat Training: Ignore weapon burden, add level to physical damage rolls
+
+SUBCLASSES: Call of the Brave or Call of the Slayer
+
+CALL OF THE BRAVE
+- Courage: Gain Hope when you fail with Fear
+- Battle Ritual: Clear 2 Stress and gain 2 Hope before dangerous situations
+- Rise to the Challenge (Specialization): Roll d20 as Hope Die at 2 or fewer HP
+- Camaraderie (Mastery): Extra Tag Team Roll, reduced cost for allies
+
+CALL OF THE SLAYER
+- Slayer: Pool of Slayer Dice to add to attack/damage rolls
+- Weapon Specialist (Specialization): Add secondary weapon damage die
+- Martial Preparation (Mastery): Party gains Martial Preparation downtime move
+
+================================================================================
+WIZARD
+================================================================================
+Wizards acquire and hone magical power through years of learning using books, stones, potions, and herbs.
+
+DOMAINS: Codex & Splendor
+STARTING EVASION: 11
+STARTING HIT POINTS: 5
+CLASS ITEMS: A book you're trying to translate or a tiny, harmless elemental pet
+
+WIZARD'S HOPE FEATURE
+Not This Time: Spend 3 Hope to force an adversary to reroll an attack or damage roll.
+
+CLASS FEATURES
+- Prestidigitation: Perform harmless magical effects at will
+- Strange Patterns: Choose a number 1-12; gain Hope or clear Stress when rolled
+
+SUBCLASSES: School of Knowledge or School of War
+
+SCHOOL OF KNOWLEDGE (Spellcast: Knowledge)
+- Prepared: Take additional domain card
+- Adept: Mark Stress instead of spending Hope to double Experience modifier
+- Accomplished (Specialization): Another additional domain card
+- Brilliant (Mastery): Another additional domain card, Honed Expertise
+
+SCHOOL OF WAR (Spellcast: Knowledge)
+- Battlemage: Additional Hit Point slot
+- Face Your Fear: Deal extra 1d10 magic damage on success with Fear
+- Conjure Shield (Specialization): Add Proficiency to Evasion with 2+ Hope
+- Have No Fear (Mastery): Extra damage increases to 3d10

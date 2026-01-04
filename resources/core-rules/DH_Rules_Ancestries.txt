@@ -1,0 +1,176 @@
+ANCESTRIES
+
+Ancestries represent your character's lineage, which affects their physical appearance and access to certain special abilities. Each ancestry grants two ancestry features. The term "people" is used to refer to all ancestries, as individuals from all lineages possess unique characteristics and cultures, as well as personhood.
+
+================================================================================
+CLANK
+================================================================================
+Clanks are sentient mechanical beings built from a variety of materials, including metal, wood, and stone. They can resemble humanoids, animals, or even inanimate objects. Their bodies come in a wide array of sizes. Because of their bespoke construction, many clanks have highly specialized physical configurations including clawed hands, wheels for movement, or built-in weaponry. A clank's lifespan extends as long as they're able to acquire or craft new parts.
+
+ANCESTRY FEATURES:
+- Purposeful Design: Decide who made you and for what purpose. At character creation, choose one of your Experiences that best aligns with this purpose and gain a permanent +1 bonus to it.
+- Efficient: When you take a short rest, you can choose a long rest move instead of a short rest move.
+
+================================================================================
+DRAKONA
+================================================================================
+Drakona resemble wingless dragons in humanoid form and possess a powerful elemental breath. All drakona have thick scales that provide excellent natural armor. They are large in size, ranging from 5 feet to 7 feet on average, with long sharp teeth that grow throughout their approximately 350-year lifespan. Unlike their dragon ancestors, drakona don't have wings and can't fly without magical aid.
+
+ANCESTRY FEATURES:
+- Scales: Your scales act as natural protection. When you would take Severe damage, you can mark a Stress to mark 1 fewer Hit Points.
+- Elemental Breath: Choose an element for your breath (such as electricity, fire, or ice). You can use this breath against a target or group of targets within Very Close range, treating it as an Instinct weapon that deals d8 magic damage using your Proficiency.
+
+================================================================================
+DWARF
+================================================================================
+Dwarves are short humanoids with square frames, dense musculature, and thick hair. Their average height ranges from 4 to 5 1/2 feet. Their skin and nails contain high keratin, making them naturally resilient, allowing them to embed gemstones into their bodies. Dwarves of all genders can grow facial hair. Typically, dwarves live up to 250 years of age.
+
+ANCESTRY FEATURES:
+- Thick Skin: When you take Minor damage, you can mark 2 Stress instead of marking a Hit Point.
+- Increased Fortitude: Spend 3 Hope to halve incoming physical damage.
+
+================================================================================
+ELF
+================================================================================
+Elves are typically tall humanoids with pointed ears and acutely attuned senses. Heights range from about 6 to 6 1/2 feet. All elves can drop into a celestial trance rather than sleep. Some elves possess a "mystic form" - physical changes from dedicating themselves to nature (celestial freckles, leaves in hair, flickering eyes, etc.). Elves live for about 350 years.
+
+ANCESTRY FEATURES:
+- Quick Reactions: Mark a Stress to gain advantage on a reaction roll.
+- Celestial Trance: During a rest, you can drop into a trance to choose an additional downtime move.
+
+================================================================================
+FAERIE
+================================================================================
+Faeries are winged humanoid creatures with insectile features. They possess characteristics ranging from additional arms, compound eyes, lantern organs, chitinous exoskeletons, or stingers. Average height ranges from 2 feet to 7 feet. All faeries possess membranous wings and go through metamorphosis. Lifespan is approximately 50 years.
+
+ANCESTRY FEATURES:
+- Luckbender: Once per session, after you or a willing ally within Close range makes an action roll, you can spend 3 Hope to reroll the Duality Dice.
+- Wings: You can fly. While flying, you can mark a Stress after an adversary makes an attack against you to gain a +2 bonus to your Evasion against that attack.
+
+================================================================================
+FAUN
+================================================================================
+Fauns resemble humanoid goats with curving horns, square pupils, and cloven hooves. Most have a humanoid torso and a goatlike lower body covered in dense fur. Heights range from 4 feet to 6 1/2 feet and can change dramatically based on stance. Fauns live for roughly 225 years, and as they age, their appearance can become increasingly goatlike.
+
+ANCESTRY FEATURES:
+- Caprine Leap: You can leap anywhere within Close range as though you were using normal movement, allowing you to vault obstacles, jump across gaps, or scale barriers with ease.
+- Kick: When you succeed on an attack against a target within Melee range, you can mark a Stress to kick yourself off them, dealing an extra 2d6 damage and knocking back either yourself or the target to Very Close range.
+
+================================================================================
+FIRBOLG
+================================================================================
+Firbolgs are bovine humanoids typically recognized by their broad noses and long, drooping ears. Some have heads that entirely resemble cattle (often referred to as minotaurs). They are tall and muscular, heights ranging from 5 feet to 7 feet, and possess remarkable strength. All firbolgs are covered in fur. On average, firbolgs live for about 150 years.
+
+ANCESTRY FEATURES:
+- Charge: When you succeed on an Agility Roll to move from Far or Very Far range into Melee range with one or more targets, you can mark a Stress to deal 1d12 physical damage to all targets within Melee range.
+- Unshakable: When you would mark a Stress, roll a d6. On a result of 6, don't mark it.
+
+================================================================================
+FUNGRIL
+================================================================================
+Fungril resemble humanoid mushrooms. They come in an assortment of colors, from earth tones to bright reds, yellows, purples, and blues. Heights range from 2 feet to 7 feet. Common lifespan is about 300 years. They can communicate nonverbally and many use a mycelial array to chemically exchange information with other fungril across long distances.
+
+ANCESTRY FEATURES:
+- Fungril Network: Make an Instinct Roll (12) to use your mycelial array to speak with others of your ancestry. On a success, you can communicate across any distance.
+- Death Connection: While touching a corpse that died recently, you can mark a Stress to extract one memory from the corpse related to a specific emotion or sensation of your choice.
+
+================================================================================
+GALAPA
+================================================================================
+Galapa resemble anthropomorphic turtles with large, domed shells into which they can retract. Height ranges from 4 feet to 6 feet. They can draw their head, arms, and legs into their shell for protection. Some supplement their shell's strength or appearance by attaching armor or carving unique designs. Most galapa move slowly and live approximately 150 years.
+
+ANCESTRY FEATURES:
+- Shell: Gain a bonus to your damage thresholds equal to your Proficiency.
+- Retract: Mark a Stress to retract into your shell. While in your shell, you have resistance to physical damage, you have disadvantage on action rolls, and you can't move.
+
+================================================================================
+GIANT
+================================================================================
+Giants are towering humanoids with broad shoulders, long arms, and one to three eyes. Adult giants range from 6 1/2 to 8 1/2 feet tall. They are born with no eyes and remain sightless for their first year. Those with a single eye are commonly known as cyclops. The average giant lifespan is about 75 years.
+
+ANCESTRY FEATURES:
+- Endurance: Gain an additional Hit Point slot at character creation.
+- Reach: Treat any weapon, ability, spell, or other feature that has a Melee range as though it has a Very Close range instead.
+
+================================================================================
+GOBLIN
+================================================================================
+Goblins are small humanoids recognizable by their large eyes and massive membranous ears. They perceive details at great distances and in darkness. A typical goblin stands between 3 feet and 4 feet tall. Goblins use ear positions for nonverbal communication. A goblin's lifespan is roughly 100 years.
+
+ANCESTRY FEATURES:
+- Surefooted: You ignore disadvantage on Agility Rolls.
+- Danger Sense: Once per rest, mark a Stress to force an adversary to reroll an attack against you or an ally within Very Close range.
+
+================================================================================
+HALFLING
+================================================================================
+Halflings are small humanoids with large hairy feet and prominent rounded ears. Average height is 3 to 4 feet. Their ears, nose, and feet are larger in proportion to the rest of their body. They live around 150 years and remain youthful even in old age. Halflings are naturally attuned to magnetic fields, granting them a strong internal compass.
+
+ANCESTRY FEATURES:
+- Luckbringer: At the start of each session, everyone in your party gains a Hope.
+- Internal Compass: When you roll a 1 on your Hope Die, you can reroll it.
+
+================================================================================
+HUMAN
+================================================================================
+Humans are recognized by their dexterous hands, rounded ears, and bodies built for endurance. Average height ranges from just under 5 feet to about 6 1/2 feet. Humans are physically adaptable and adjust to harsh climates with relative ease. Humans live to about 100 years.
+
+ANCESTRY FEATURES:
+- High Stamina: Gain an additional Stress slot at character creation.
+- Adaptability: When you fail a roll that utilized one of your Experiences, you can mark a Stress to reroll.
+
+================================================================================
+INFERNIS
+================================================================================
+Infernis are humanoids who possess sharp canine teeth, pointed ears, and horns. They are descendants of demons from the Circles Below. Height ranges from 5 feet to 7 feet. They have long fingers and pointed nails. Some have long, thin tails. Infernis possess a "dread visage" that manifests both involuntarily and purposefully. On average, infernis live up to 350 years.
+
+ANCESTRY FEATURES:
+- Fearless: When you roll with Fear, you can mark 2 Stress to change it into a roll with Hope instead.
+- Dread Visage: You have advantage on rolls to intimidate hostile creatures.
+
+================================================================================
+KATARI
+================================================================================
+Katari are feline humanoids with retractable claws, vertically slit pupils, and high, triangular ears. Their ears can swivel nearly 180 degrees. About half of the katari population have tails. Height ranges from 3 feet to 6 1/2 feet, and they live to around 150 years.
+
+ANCESTRY FEATURES:
+- Feline Instincts: When you make an Agility Roll, you can spend 2 Hope to reroll your Hope Die.
+- Retracting Claws: Make an Agility Roll to scratch a target within Melee range. On a success, they become temporarily Vulnerable.
+
+================================================================================
+ORC
+================================================================================
+Orcs are humanoids recognized by their square features and boar-like tusks that protrude from their lower jaw. They typically live for 125 years, and tusks continue to grow throughout their lives. Their ears are pointed, skin has green, blue, pink, or gray tones. Height ranges from 5 feet to 6 1/2 feet.
+
+ANCESTRY FEATURES:
+- Sturdy: When you have 1 Hit Point remaining, attacks against you have disadvantage.
+- Tusks: When you succeed on an attack against a target within Melee range, you can spend a Hope to gore the target with your tusks, dealing an extra 1d6 damage.
+
+================================================================================
+RIBBET
+================================================================================
+Ribbets resemble anthropomorphic frogs with protruding eyes and webbed hands and feet. Size ranges from 3 feet to 4 1/2 feet. Ribbets primarily move by hopping and can swim with ease. They are born from eggs, hatch into tadpoles, and after 6-7 years grow into amphibians. Ribbets live for approximately 100 years.
+
+ANCESTRY FEATURES:
+- Amphibious: You can breathe and move naturally underwater.
+- Long Tongue: You can use your long tongue to grab onto things within Close range. Mark a Stress to use your tongue as a Finesse Close weapon that deals d12 physical damage using your Proficiency.
+
+================================================================================
+SIMIAH
+================================================================================
+Simiah resemble anthropomorphic monkeys and apes with long limbs and prehensile feet. Size ranges from 2 to 6 feet. All simiah can use their dexterous feet for nonverbal communication, work, and combat. Some have prehensile tails. Simiah are skilled climbers and live for about 100 years.
+
+ANCESTRY FEATURES:
+- Natural Climber: You have advantage on Agility Rolls that involve balancing and climbing.
+- Nimble: Gain a permanent +1 bonus to your Evasion at character creation.
+
+================================================================================
+MIXED ANCESTRY
+================================================================================
+If you decide that your character is a descendant of multiple ancestries and want to represent that mechanically:
+
+1. Determine Ancestry Combination: Write down how your character identifies in the Heritage section. You can use a hybridized term, list only one ancestry, or invent a new term.
+
+2. Choose Ancestry Features: Work with your GM to choose two features from the ancestries in your character's lineage. You must choose the first feature from one ancestry and the second from another.
+
+Example: A goblin-orc might take "Surefooted" and "Tusks" or "Sturdy" and "Danger Sense". You can't take both first-listed features from different ancestries.

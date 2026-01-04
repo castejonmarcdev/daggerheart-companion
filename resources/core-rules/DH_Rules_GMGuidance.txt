@@ -1,0 +1,216 @@
+GM GUIDANCE
+
+The GM is responsible for guiding the narrative and roleplaying the world the PCs inhabit.
+
+================================================================================
+GM PRINCIPLES
+================================================================================
+
+BEGIN AND END WITH THE FICTION
+Use the fiction to drive mechanics, then connect the mechanics back to the fiction.
+
+COLLABORATE AT ALL TIMES, ESPECIALLY DURING CONFLICT
+The PCs are the protagonists of the campaign; antagonism between player and GM should exist only in the fiction.
+
+FILL THE WORLD WITH LIFE, WONDER, AND DANGER
+Showcase rich cultures, take the PCs to wondrous places, and introduce them to dangerous creatures.
+
+ASK QUESTIONS AND INCORPORATE THE ANSWERS
+Ensuring that the players' ideas are included results in a narrative that supports the whole group's creativity.
+
+GIVE EVERY ROLL IMPACT
+Only ask the players to roll during meaningful moments.
+
+PLAY TO FIND OUT WHAT HAPPENS
+Be surprised by what the characters do, the choices they make, and the people they become.
+
+HOLD ON GENTLY
+Don't worry if you need to abandon or alter something that came before.
+
+================================================================================
+GM PRACTICES
+================================================================================
+
+CULTIVATE A CURIOUS TABLE
+Follow what catches the players' interest to foster an environment of creative inquiry.
+
+GAIN YOUR PLAYERS' TRUST
+Act in good faith, follow through on your promises, admit your mistakes.
+
+KEEP THE STORY MOVING FORWARD
+Advance the story through escalating action, new information, or changing circumstances after every action roll.
+
+CUT TO THE ACTION
+Skip past the boring bits. When a scene drags on, end it.
+
+HELP THE PLAYERS USE THE GAME
+Players have more fun when you help them understand the system.
+
+CREATE A META CONVERSATION
+Empower players to speak out of character, use safety tools, and ask for clarification.
+
+TELL THEM WHAT THEY WOULD KNOW
+Don't hide obvious details or important information from the players.
+
+GROUND THE WORLD IN MOTIVE
+An NPC's actions flow from their goals and desires.
+
+BRING THE GAME'S MECHANICS TO LIFE
+Set a good example of how fiction and mechanics work together.
+
+REFRAME RATHER THAN REJECT
+If a player's contribution conflicts with the fiction, work with them to reshape it.
+
+WORK IN MOMENTS AND MONTAGES
+When framing a scene, decide which beats should be savored and which shouldn't linger.
+
+================================================================================
+PITFALLS TO AVOID
+================================================================================
+
+UNDERMINING THE HEROES
+If a roll doesn't go well, show how it was impacted by an adversary's prowess, environmental factors, or unexpected surprises, rather than the PC's incompetence.
+
+ALWAYS TELLING THE PLAYERS WHAT TO ROLL
+Let the players decide how to handle a challenge.
+
+LETTING SCENES DRAG
+Shake it up or cut away when a scene has concluded, the table's energy is flagging, or people are talking in circles.
+
+SINGULAR SOLUTIONS
+Don't get hung up on one right answer to a problem. If the players have a clever idea, make it work.
+
+OVERPLANNING
+Spend your prep time inventing situations instead of scripting scenes. If the players surprise you, take a break to think through your options.
+
+HOARDING FEAR
+Spend Fear when you have the opportunity. The players will always generate more.
+
+================================================================================
+CORE GM MECHANICS
+================================================================================
+
+ROLLING DICE
+The GM has no Duality Dice; instead, they roll a single d20 called the GM's Die.
+
+ADVERSARY ATTACK ROLLS
+Roll d20 and add adversary's attack bonus. If total meets or beats target's Evasion, the attack succeeds. On success, roll damage dice.
+
+CRITICAL HITS: Rolling natural 20 automatically succeeds and deals extra damage. Roll damage normally, then add the highest number on the damage dice to the total. (Example: 3d6+2 deals 18+3d6+2 on critical success.)
+
+Note: Critical success on an adversary's reaction roll automatically succeeds but confers no additional benefit.
+
+================================================================================
+GUIDANCE ON ACTION ROLLS
+================================================================================
+
+After a player describes a move, consider:
+- Whether the roll is necessary (consider Experiences, backstory, pressure, possible outcomes)
+- Establish the stakes before the player rolls
+- Communicate any unavoidable consequences
+- Optionally offer the player a choice to forgo a roll in exchange for an interesting outcome, cost, or complication
+
+================================================================================
+MAKING GM MOVES
+================================================================================
+
+GM moves change the story in response to player actions. They aren't bound by specific spells or effects - describe actions however the fiction demands.
+
+WHEN TO MAKE A MOVE:
+- Player rolls with Fear
+- Player fails an action roll
+- Player does something with unavoidable consequences
+- Player gives you a "golden opportunity" (an opening demanding immediate response)
+- Players look to you for what happens next
+
+================================================================================
+CHOOSING GM MOVES BASED ON ROLL RESULTS
+================================================================================
+
+CRITICAL SUCCESS:
+Let the player describe their success, then give them an additional opportunity or advantage.
+
+SUCCESS WITH HOPE:
+Let the player describe their success, then show how the world reacts to it.
+
+SUCCESS WITH FEAR:
+Work with the player to describe their success, then take a Fear and make a GM move to introduce a minor consequence, complication, or cost:
+- An adversary attacks
+- The PC marks a Stress
+- Introduce a new threat
+- Raise the stakes of the conflict
+
+FAILURE WITH HOPE:
+Describe how the PC fails to get what they want, then make a GM move to introduce a minor consequence, complication, or cost:
+- An adversary attacks
+- The PC marks a Stress
+- Introduce a new threat
+- Show how the world reacts
+- Ask a question and build on the answer
+- Make an NPC act in accordance with their motive
+- Drive a PC to take action by dangling their goals in front of them
+
+FAILURE WITH FEAR:
+Describe how the PC fails, then take a Fear and make a GM move to introduce a major consequence, complication, or cost.
+
+================================================================================
+GM MOVES LIST
+================================================================================
+
+SOFT MOVES (hints, warnings, setup):
+- Reveal an unwelcome truth
+- Show signs of an approaching threat
+- Offer an opportunity with cost
+- Tell them the requirements and ask
+- Put someone in a spot
+- Separate them
+- Announce off-screen badness
+
+HARD MOVES (immediate consequences):
+- Deal damage
+- Use a monster's special ability
+- Make a move from an environment
+- Capture or corner someone
+- Destroy something
+- Take away something
+- Create a deadline
+- Inflict a condition
+
+================================================================================
+FEAR FEATURES
+================================================================================
+
+Many adversaries and environments have Fear Features - especially powerful or consequential moves that the GM must spend Fear to activate.
+
+Note: This Fear is in addition to any Fear previously spent to seize the spotlight or activate another action or ability.
+
+================================================================================
+ADVERSARY ACTIONS
+================================================================================
+
+When play passes to the GM, they can make a GM move to spotlight an adversary. A spotlighted adversary can:
+- Move within Close range and make a standard attack
+- Move within Close range and use an adversary action
+- Clear a condition
+- Sprint within Far or Very Far range on the battlefield
+- Do anything else the fiction demands or GM deems appropriate
+
+The GM can spend additional Fear to spotlight additional adversaries. Once finished, the spotlight swings back to the PCs.
+
+================================================================================
+PLAYER PRINCIPLES & BEST PRACTICES
+================================================================================
+
+PRINCIPLES:
+- Be a fan of your character and their journey
+- Spotlight your friends
+- Address the characters and address the players
+- Build the world together
+- Play to find out what happens
+- Hold on gently
+
+BEST PRACTICES:
+- Embrace danger
+- Use your resources
+- Tell the story
+- Discover your character

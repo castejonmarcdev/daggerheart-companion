@@ -1,0 +1,95 @@
+COMMUNITIES
+
+Your character's community grants them a community feature. Each community card also lists six adjectives you can use as inspiration to create your character's personality, their relationship to their peers, their attitude toward their upbringing, or the demeanor with which they interact with the rest of the party.
+
+Communities represent a key aspect of the culture, class, or environment of origin that has had the most influence over your character's upbringing.
+
+================================================================================
+HIGHBORNE
+================================================================================
+Being part of a highborne community means you're accustomed to a life of elegance, opulence, and prestige within the upper echelons of society. Members possess incredible material wealth in various forms (gold, land, controlling production). This status comes with power and influence. There is little social mobility within their ranks. Highborne often control the political and economic status of the areas in which they live.
+
+Highborne are often: amiable, candid, conniving, enterprising, ostentatious, and unflappable.
+
+COMMUNITY FEATURE:
+Privilege: You have advantage on rolls to consort with nobles, negotiate prices, or leverage your reputation to get what you want.
+
+================================================================================
+LOREBORNE
+================================================================================
+Being part of a loreborne community means you're from a society that favors strong academic or political prowess. Loreborne highly value knowledge in forms of historical preservation, political advancement, scientific study, skill development, or lore compilation. Most research in institutions built in bastions of civilization, while some gather information from the natural world.
+
+Loreborne are often: direct, eloquent, inquisitive, patient, rhapsodic, and witty.
+
+COMMUNITY FEATURE:
+Well-Read: You have advantage on rolls that involve the history, culture, or politics of a prominent person or place.
+
+================================================================================
+ORDERBORNE
+================================================================================
+Being part of an orderborne community means you're from a collective that focuses on discipline or faith, and you uphold a set of principles that reflect your experience there. Orderborne are frequently powerful among surrounding communities by aligning members around a common value or goal (a god, doctrine, ethos, or shared trade). Some are pacifistic, while others structure themselves around military prowess.
+
+Orderborne are often: ambitious, benevolent, pensive, prudent, sardonic, and stoic.
+
+COMMUNITY FEATURE:
+Dedicated: Record three sayings or values your upbringing instilled in you. Once per rest, when you describe how you're embodying one of these principles through your current action, you can roll a d20 as your Hope Die.
+
+================================================================================
+RIDGEBORNE
+================================================================================
+Being part of a ridgeborne community means you've called the rocky peaks and sharp cliffs of the mountainside home. Those who've lived in the mountains consider themselves hardier than most. These groups are adept at adaptation, developing unique technologies to move people and products across difficult terrain. Ridgeborne grow up scrambling and climbing, making them sturdy and strong-willed.
+
+Ridgeborne are often: bold, hardy, indomitable, loyal, reserved, and stubborn.
+
+COMMUNITY FEATURE:
+Steady: You have advantage on rolls to traverse dangerous cliffs and ledges, navigate harsh environments, and use your survival knowledge.
+
+================================================================================
+SEABORNE
+================================================================================
+Being part of a seaborne community means you lived on or near a large body of water. Seaborne communities are built, both physically and culturally, around the specific waters they call home. Some live along the shore constructing ports, while others live on the water in boats or ships. Seaborne learn to fish at a young age, and train from birth to hold their breath and swim in tumultuous waters.
+
+Seaborne are often: candid, cooperative, exuberant, fierce, resolute, and weathered.
+
+COMMUNITY FEATURE:
+Know the Tide: You can sense the ebb and flow of life. When you roll with Fear, place a token on your community card. You can hold a number of tokens equal to your level. Before you make an action roll, you can spend any number of these tokens to gain a +1 bonus to the roll for each token spent. At the end of each session, clear all unspent tokens.
+
+================================================================================
+SLYBORNE
+================================================================================
+Being part of a slyborne community means you come from a group that operates outside the law, including all manner of criminals, grifters, and con artists. Members are brought together by disreputable goals and clever means of achieving them. Many have skills in forging, thievery, smuggling, and violence. People of any social class can be slyborne. These communities possess strict codes of honor.
+
+Slyborne are often: calculating, clever, formidable, perceptive, shrewd, and tenacious.
+
+COMMUNITY FEATURE:
+Scoundrel: You have advantage on rolls to negotiate with criminals, detect lies, or find a safe place to hide.
+
+================================================================================
+UNDERBORNE
+================================================================================
+Being part of an underborne community means you're from a subterranean society. Many live right beneath the cities and villages of other collectives, while some live much deeper. These communities range from small family groups in burrows to massive metropolises in caverns. Underborne are recognized for incredible boldness and skill in architecture and engineering. Many develop unique nonverbal languages useful on the surface.
+
+Underborne are often: composed, elusive, indomitable, innovative, resourceful, and unpretentious.
+
+COMMUNITY FEATURE:
+Low-Light Living: When you're in an area with low light or heavy shadow, you have advantage on rolls to hide, investigate, or perceive details within that area.
+
+================================================================================
+WANDERBORNE
+================================================================================
+Being part of a wanderborne community means you've lived as a nomad, forgoing a permanent home and experiencing a wide variety of cultures. Unlike many communities defined by locale, wanderborne are defined by their traveling lifestyle. Because of frequent migration, wanderborne put less value on material possessions in favor of acquiring information, skills, and connections. They are known for unwavering loyalty.
+
+Wanderborne are often: inscrutable, magnanimous, mirthful, reliable, savvy, and unorthodox.
+
+COMMUNITY FEATURE:
+Nomadic Pack: Add a Nomadic Pack to your inventory. Once per session, you can spend a Hope to reach into this pack and pull out a mundane item that's useful to your situation. Work with the GM to figure out what item you take out.
+
+================================================================================
+WILDBORNE
+================================================================================
+Being part of a wildborne community means you lived deep within the forest. Wildborne communities are defined by their dedication to the conservation of their homelands, and many have strong religious or cultural ties to the fauna they live among. This results in unique architectural and technological advancements that favor sustainability. It's not uncommon for wildborne to remain reclusive and hidden within their woodland homes.
+
+Wildborne are often: hardy, loyal, nurturing, reclusive, sagacious, and vibrant.
+
+COMMUNITY FEATURE:
+Lightfoot: Your movement is naturally silent. You have advantage on rolls to move without being heard.
