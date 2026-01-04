@@ -19,6 +19,7 @@ import {
   MechanicsByCategoryPage,
   GuideDetailPage,
   SearchResultsPage,
+  CharacterCreatorPage,
 } from './pages';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="mechanics/category/:category" element={<MechanicsByCategoryPage />} />
           <Route path="mechanics/:slug" element={<MechanicDetailPage />} />
           <Route path="guides/:slug" element={<GuideDetailPage />} />
+          <Route path="tools/character-creator" element={<CharacterCreatorPage />} />
           <Route path="search" element={<SearchResultsPage />} />
         </Route>
       </Routes>

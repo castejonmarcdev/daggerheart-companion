@@ -11,6 +11,7 @@ import {
   Weapon,
   Armor,
 } from '../api/client';
+import { getSubclassImage, getAncestryImage, getCommunityImage } from '../utils/imageUrls';
 
 type Step = 'class' | 'subclass' | 'ancestry' | 'community' | 'equipment' | 'summary';
 
@@ -22,6 +23,46 @@ interface CharacterState {
   weapon: Weapon | null;
   armor: Armor | null;
 }
+
+// Class descriptions and pop culture examples
+const classInfo: Record<string, { tagline: string; examples: string[] }> = {
+  bard: {
+    tagline: 'Inspire allies and manipulate foes with the power of performance and charm.',
+    examples: ['Jaskier (The Witcher)', 'Star-Lord (Guardians)', 'Captain Jack Sparrow'],
+  },
+  druid: {
+    tagline: 'Channel primal nature magic, shapeshift, and command the wild.',
+    examples: ['Radagast (LOTR)', 'Beast Boy (Teen Titans)', 'Poison Ivy'],
+  },
+  guardian: {
+    tagline: 'An unbreakable defender who shields allies and holds the line.',
+    examples: ['Captain America', 'Brienne of Tarth (GoT)', 'The Mandalorian'],
+  },
+  ranger: {
+    tagline: 'A deadly hunter who tracks prey and strikes from the shadows.',
+    examples: ['Aragorn (LOTR)', 'Hawkeye (Avengers)', 'Katniss Everdeen'],
+  },
+  rogue: {
+    tagline: 'A cunning trickster who exploits weaknesses and bends the rules.',
+    examples: ['Black Widow', 'Arya Stark (GoT)', 'Han Solo'],
+  },
+  seraph: {
+    tagline: 'A divine warrior blessed with holy power to smite and heal.',
+    examples: ['Thor (MCU)', 'Wonder Woman', 'Castiel (Supernatural)'],
+  },
+  sorcerer: {
+    tagline: 'Raw magical power flows through you, wild and unpredictable.',
+    examples: ['Scarlet Witch', 'Elsa (Frozen)', 'Jean Grey (X-Men)'],
+  },
+  warrior: {
+    tagline: 'A master of weapons and combat, always ready for a fight.',
+    examples: ['Conan the Barbarian', 'Gimli (LOTR)', 'Kratos (God of War)'],
+  },
+  wizard: {
+    tagline: 'A scholar of the arcane who bends reality through knowledge.',
+    examples: ['Gandalf (LOTR)', 'Doctor Strange', 'Hermione Granger'],
+  },
+};
 
 const STEPS: { key: Step; label: string }[] = [
   { key: 'class', label: 'Class' },
@@ -50,6 +91,7 @@ export function CharacterCreatorPage() {
   const [weapons, setWeapons] = useState<Weapon[]>([]);
   const [armors, setArmors] = useState<Armor[]>([]);
   const [loading, setLoading] = useState(false);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   // Load initial data
   useEffect(() => {
@@ -61,6 +103,10 @@ export function CharacterCreatorPage() {
   }, []);
 
   const currentStepIndex = STEPS.findIndex(s => s.key === currentStep);
+
+  const handleImageError = (slug: string) => {
+    setFailedImages(prev => new Set(prev).add(slug));
+  };
 
   const goToStep = (step: Step) => {
     setCurrentStep(step);
@@ -157,18 +203,24 @@ export function CharacterCreatorPage() {
         Your class defines your character's abilities and role in the party.
       </p>
       <div className="creator-grid">
-        {classes.map(cls => (
-          <button
-            key={cls.slug}
-            className="creator-card"
-            onClick={() => handleClassSelect(cls)}
-          >
-            <h3>{cls.name}</h3>
-            <p className="card-stats">HP: {cls.startingHP} | Evasion: {cls.startingEvasion}</p>
-            <p className="card-domains">{cls.domains.join(' & ')}</p>
-            {cls.description && <p className="card-description">{cls.description}</p>}
-          </button>
-        ))}
+        {classes.map(cls => {
+          const info = classInfo[cls.slug] || { tagline: cls.description || '', examples: [] };
+          return (
+            <button
+              key={cls.slug}
+              className="creator-card creator-card-class"
+              onClick={() => handleClassSelect(cls)}
+            >
+              <h3>{cls.name}</h3>
+              <p className="card-tagline">{info.tagline}</p>
+              {info.examples.length > 0 && (
+                <p className="card-examples">
+                  <span className="examples-label">Think:</span> {info.examples.join(', ')}
+                </p>
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -184,23 +236,37 @@ export function CharacterCreatorPage() {
         </p>
         <div className="creator-grid creator-grid-large">
           {character.classData.subclasses.map(sub => {
+            const imageUrl = getSubclassImage(sub.slug);
+            const hasImage = !failedImages.has(sub.slug);
             const foundation = sub.features.find(f => !f.type || f.type === 'foundation');
+
             return (
               <button
                 key={sub.slug}
-                className="creator-card"
+                className="creator-card creator-card-with-image"
                 onClick={() => handleSubclassSelect(sub)}
               >
-                <h3>{sub.name}</h3>
-                {sub.spellcastTrait && (
-                  <p className="card-trait">Spellcast: {sub.spellcastTrait}</p>
-                )}
-                {foundation && (
-                  <div className="card-feature">
-                    <strong>{foundation.name}</strong>
-                    <p>{foundation.description}</p>
+                {hasImage && (
+                  <div className="card-image">
+                    <img
+                      src={imageUrl}
+                      alt={sub.name}
+                      onError={() => handleImageError(sub.slug)}
+                    />
                   </div>
                 )}
+                <div className="card-body">
+                  <h3>{sub.name}</h3>
+                  {sub.spellcastTrait && (
+                    <p className="card-trait">Spellcast: {sub.spellcastTrait}</p>
+                  )}
+                  {foundation && (
+                    <div className="card-feature">
+                      <strong>{foundation.name}</strong>
+                      <p>{foundation.description}</p>
+                    </div>
+                  )}
+                </div>
               </button>
             );
           })}
@@ -216,18 +282,31 @@ export function CharacterCreatorPage() {
         Your ancestry represents your character's heritage and grants unique abilities.
       </p>
       <div className="creator-grid">
-        {ancestries.map(anc => (
-          <button
-            key={anc.slug}
-            className="creator-card"
-            onClick={() => handleAncestrySelect(anc)}
-          >
-            <h3>{anc.name}</h3>
-            {anc.description && (
-              <p className="card-description">{anc.description.substring(0, 120)}...</p>
-            )}
-          </button>
-        ))}
+        {ancestries.map(anc => {
+          const imageUrl = getAncestryImage(anc.slug);
+          const hasImage = !failedImages.has(`ancestry-${anc.slug}`);
+
+          return (
+            <button
+              key={anc.slug}
+              className="creator-card creator-card-with-image"
+              onClick={() => handleAncestrySelect(anc)}
+            >
+              {hasImage && (
+                <div className="card-image">
+                  <img
+                    src={imageUrl}
+                    alt={anc.name}
+                    onError={() => handleImageError(`ancestry-${anc.slug}`)}
+                  />
+                </div>
+              )}
+              <div className="card-body">
+                <h3>{anc.name}</h3>
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -239,18 +318,31 @@ export function CharacterCreatorPage() {
         Your community represents where you grew up and the values you were raised with.
       </p>
       <div className="creator-grid">
-        {communities.map(comm => (
-          <button
-            key={comm.slug}
-            className="creator-card"
-            onClick={() => handleCommunitySelect(comm)}
-          >
-            <h3>{comm.name}</h3>
-            {comm.description && (
-              <p className="card-description">{comm.description.substring(0, 120)}...</p>
-            )}
-          </button>
-        ))}
+        {communities.map(comm => {
+          const imageUrl = getCommunityImage(comm.slug);
+          const hasImage = !failedImages.has(`community-${comm.slug}`);
+
+          return (
+            <button
+              key={comm.slug}
+              className="creator-card creator-card-with-image"
+              onClick={() => handleCommunitySelect(comm)}
+            >
+              {hasImage && (
+                <div className="card-image">
+                  <img
+                    src={imageUrl}
+                    alt={comm.name}
+                    onError={() => handleImageError(`community-${comm.slug}`)}
+                  />
+                </div>
+              )}
+              <div className="card-body">
+                <h3>{comm.name}</h3>
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
