@@ -27,13 +27,60 @@ const UNARMED_WEAPON: Weapon = {
   damageType: 'phy',
 };
 
-type Step = 'class' | 'subclass' | 'ancestry' | 'community' | 'equipment' | 'summary';
+type Step = 'class' | 'subclass' | 'ancestry' | 'community' | 'traits' | 'equipment' | 'summary';
+
+// Trait definitions with descriptions and examples
+type TraitKey = 'agility' | 'strength' | 'finesse' | 'instinct' | 'presence' | 'knowledge';
+
+interface TraitInfo {
+  name: string;
+  examples: string;
+  description: string;
+}
+
+const TRAITS: Record<TraitKey, TraitInfo> = {
+  agility: {
+    name: 'Agility',
+    examples: 'Sprint, Leap, Maneuver',
+    description: 'A high Agility means you\'re fast on your feet, nimble on difficult terrain, and quick to react to danger.',
+  },
+  strength: {
+    name: 'Strength',
+    examples: 'Lift, Smash, Grapple',
+    description: 'A high Strength means you\'re better at feats that test your physical prowess and stamina.',
+  },
+  finesse: {
+    name: 'Finesse',
+    examples: 'Control, Hide, Tinker',
+    description: 'A high Finesse means you\'re skilled at tasks that require accuracy, stealth, or the utmost control.',
+  },
+  instinct: {
+    name: 'Instinct',
+    examples: 'Perceive, Sense, Navigate',
+    description: 'A high Instinct means you have a keen sense of your surroundings and a natural intuition.',
+  },
+  presence: {
+    name: 'Presence',
+    examples: 'Charm, Perform, Deceive',
+    description: 'A high Presence means you have a strong force of personality and a facility for social situations.',
+  },
+  knowledge: {
+    name: 'Knowledge',
+    examples: 'Recall, Analyze, Comprehend',
+    description: 'A high Knowledge means you know information others don\'t and understand how to apply your mind through deduction and inference.',
+  },
+};
+
+const DEFAULT_TRAIT_ORDER: TraitKey[] = ['agility', 'strength', 'finesse', 'instinct', 'presence', 'knowledge'];
+const TRAIT_MODIFIERS = ['+2', '+1', '+1', '+0', '+0', '-1'];
 
 interface CharacterState {
+  characterName: string;
   classData: ClassDetail | null;
   subclass: Subclass | null;
   ancestry: AncestryDetail | null;
   community: CommunityDetail | null;
+  traitOrder: TraitKey[];
   weapons: Weapon[];
   armor: Armor | null;
 }
@@ -150,6 +197,7 @@ const STEPS: { key: Step; label: string }[] = [
   { key: 'subclass', label: 'Subclass' },
   { key: 'ancestry', label: 'Ancestry' },
   { key: 'community', label: 'Community' },
+  { key: 'traits', label: 'Traits' },
   { key: 'equipment', label: 'Equipment' },
   { key: 'summary', label: 'Summary' },
 ];
@@ -157,13 +205,17 @@ const STEPS: { key: Step; label: string }[] = [
 export function CharacterCreatorPage() {
   const [currentStep, setCurrentStep] = useState<Step>('class');
   const [character, setCharacter] = useState<CharacterState>({
+    characterName: '',
     classData: null,
     subclass: null,
     ancestry: null,
     community: null,
+    traitOrder: [...DEFAULT_TRAIT_ORDER],
     weapons: [],
     armor: null,
   });
+  const [hoveredTrait, setHoveredTrait] = useState<TraitKey | null>(null);
+  const [draggedTrait, setDraggedTrait] = useState<TraitKey | null>(null);
 
   // Data for selection lists
   const [classes, setClasses] = useState<ClassSummary[]>([]);
@@ -228,12 +280,60 @@ export function CharacterCreatorPage() {
     setLoading(true);
     try {
       const communityDetail = await apiClient.getCommunity(comm.slug);
-      // Reset equipment when entering equipment step
-      setCharacter(prev => ({ ...prev, community: communityDetail, weapons: [], armor: null }));
-      setCurrentStep('equipment');
+      setCharacter(prev => ({ ...prev, community: communityDetail }));
+      setCurrentStep('traits');
     } finally {
       setLoading(false);
     }
+  };
+
+  // Trait drag and drop handlers
+  const handleTraitDragStart = (trait: TraitKey) => {
+    setDraggedTrait(trait);
+  };
+
+  const handleTraitDragOver = (e: React.DragEvent, targetTrait: TraitKey) => {
+    e.preventDefault();
+    if (draggedTrait && draggedTrait !== targetTrait) {
+      setCharacter(prev => {
+        const newOrder = [...prev.traitOrder];
+        const draggedIndex = newOrder.indexOf(draggedTrait);
+        const targetIndex = newOrder.indexOf(targetTrait);
+        newOrder.splice(draggedIndex, 1);
+        newOrder.splice(targetIndex, 0, draggedTrait);
+        return { ...prev, traitOrder: newOrder };
+      });
+    }
+  };
+
+  const handleTraitDragEnd = () => {
+    setDraggedTrait(null);
+  };
+
+  const moveTraitUp = (trait: TraitKey) => {
+    setCharacter(prev => {
+      const index = prev.traitOrder.indexOf(trait);
+      if (index <= 0) return prev;
+      const newOrder = [...prev.traitOrder];
+      [newOrder[index - 1], newOrder[index]] = [newOrder[index], newOrder[index - 1]];
+      return { ...prev, traitOrder: newOrder };
+    });
+  };
+
+  const moveTraitDown = (trait: TraitKey) => {
+    setCharacter(prev => {
+      const index = prev.traitOrder.indexOf(trait);
+      if (index >= prev.traitOrder.length - 1) return prev;
+      const newOrder = [...prev.traitOrder];
+      [newOrder[index], newOrder[index + 1]] = [newOrder[index + 1], newOrder[index]];
+      return { ...prev, traitOrder: newOrder };
+    });
+  };
+
+  const handleTraitsContinue = () => {
+    // Reset equipment when entering equipment step
+    setCharacter(prev => ({ ...prev, weapons: [], armor: null }));
+    setCurrentStep('equipment');
   };
 
   const handleWeaponSelect = (weapon: Weapon) => {
@@ -259,10 +359,12 @@ export function CharacterCreatorPage() {
 
   const handleStartOver = () => {
     setCharacter({
+      characterName: '',
       classData: null,
       subclass: null,
       ancestry: null,
       community: null,
+      traitOrder: [...DEFAULT_TRAIT_ORDER],
       weapons: [],
       armor: null,
     });
@@ -270,18 +372,33 @@ export function CharacterCreatorPage() {
   };
 
   const handleDownloadSheet = async () => {
-    const { classData, subclass, ancestry, community, weapons, armor } = character;
+    const { characterName, classData, subclass, ancestry, community, weapons, armor } = character;
     if (!classData || !subclass || !ancestry || !community) return;
 
     setDownloading(true);
     try {
       await downloadCharacterSheet({
+        characterName: characterName || 'Unnamed Hero',
         className: classData.name,
         subclassName: subclass.name,
         ancestryName: ancestry.name,
         communityName: community.name,
-        weaponNames: weapons.map(w => w.name),
-        armorName: armor?.name,
+        level: 1,
+        weapons: weapons.map(w => ({
+          name: w.name,
+          damage: w.damage,
+          trait: w.trait,
+          range: w.range,
+          feature: w.feature,
+        })),
+        armor: armor ? {
+          name: armor.name,
+          baseScore: armor.score,
+          thresholds: armor.thresholds,
+        } : null,
+        startingHP: classData.startingHP,
+        startingEvasion: classData.startingEvasion,
+        domains: classData.domains,
       });
     } catch (error) {
       console.error('Failed to download character sheet:', error);
@@ -465,6 +582,77 @@ export function CharacterCreatorPage() {
     </div>
   );
 
+  const renderTraitsStep = () => (
+    <div className="creator-content">
+      <h2>Prioritize Your Traits</h2>
+      <p className="creator-description">
+        Drag and drop to reorder your traits from most important to least.
+        The order determines which modifiers (+2, +1, +1, +0, +0, -1) apply to each trait.
+      </p>
+
+      <div className="traits-list">
+        {character.traitOrder.map((traitKey, index) => {
+          const trait = TRAITS[traitKey];
+          const modifier = TRAIT_MODIFIERS[index];
+          const isFirst = index === 0;
+          const isLast = index === character.traitOrder.length - 1;
+
+          return (
+            <div
+              key={traitKey}
+              className={`trait-item ${draggedTrait === traitKey ? 'dragging' : ''}`}
+              draggable
+              onDragStart={() => handleTraitDragStart(traitKey)}
+              onDragOver={(e) => handleTraitDragOver(e, traitKey)}
+              onDragEnd={handleTraitDragEnd}
+              onMouseEnter={() => setHoveredTrait(traitKey)}
+              onMouseLeave={() => setHoveredTrait(null)}
+            >
+              <div className="trait-rank">{index + 1}</div>
+              <div className="trait-modifier">{modifier}</div>
+              <div className="trait-info">
+                <div className="trait-name">{trait.name}</div>
+                <div className="trait-examples">{trait.examples}</div>
+              </div>
+              <div className="trait-actions">
+                <button
+                  className="trait-move-btn"
+                  onClick={() => moveTraitUp(traitKey)}
+                  disabled={isFirst}
+                  title="Move up"
+                >
+                  ▲
+                </button>
+                <button
+                  className="trait-move-btn"
+                  onClick={() => moveTraitDown(traitKey)}
+                  disabled={isLast}
+                  title="Move down"
+                >
+                  ▼
+                </button>
+              </div>
+              {hoveredTrait === traitKey && (
+                <div className="trait-tooltip">
+                  {trait.description}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="creator-actions">
+        <button
+          className="btn btn-primary btn-large"
+          onClick={handleTraitsContinue}
+        >
+          Continue to Equipment
+        </button>
+      </div>
+    </div>
+  );
+
   const renderEquipmentStep = () => (
     <div className="creator-content">
       <h2>Choose Starting Equipment</h2>
@@ -538,6 +726,17 @@ export function CharacterCreatorPage() {
           Review your character choices below.
         </p>
 
+        <div className="character-name-input">
+          <label htmlFor="character-name">Character Name</label>
+          <input
+            type="text"
+            id="character-name"
+            placeholder="Enter your character's name"
+            value={character.characterName}
+            onChange={(e) => setCharacter(prev => ({ ...prev, characterName: e.target.value }))}
+          />
+        </div>
+
         <div className="character-summary">
           <div className="summary-section">
             <h3>Class: {classData.name}</h3>
@@ -578,6 +777,18 @@ export function CharacterCreatorPage() {
           <div className="summary-section">
             <h3>Community Feature</h3>
             <p><strong>{community.feature.name}:</strong> {community.feature.description}</p>
+          </div>
+
+          <div className="summary-section">
+            <h3>Traits</h3>
+            <div className="traits-summary">
+              {character.traitOrder.map((traitKey, index) => (
+                <div key={traitKey} className="trait-summary-item">
+                  <span className="trait-summary-name">{TRAITS[traitKey].name}</span>
+                  <span className="trait-summary-modifier">{TRAIT_MODIFIERS[index]}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {(weapons.length > 0 || armor) && (
@@ -630,6 +841,8 @@ export function CharacterCreatorPage() {
         return renderAncestryStep();
       case 'community':
         return renderCommunityStep();
+      case 'traits':
+        return renderTraitsStep();
       case 'equipment':
         return renderEquipmentStep();
       case 'summary':

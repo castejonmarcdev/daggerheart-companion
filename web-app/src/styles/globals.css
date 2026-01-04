@@ -2277,6 +2277,165 @@ body {
   line-height: 1.6;
 }
 
+/* Traits Step Styles */
+.traits-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.trait-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: grab;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.trait-item:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface-elevated);
+}
+
+.trait-item.dragging {
+  opacity: 0.5;
+  border-color: var(--color-primary);
+  cursor: grabbing;
+}
+
+.trait-rank {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--color-background);
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.trait-modifier {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  min-width: 40px;
+  text-align: center;
+}
+
+.trait-info {
+  flex: 1;
+}
+
+.trait-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.trait-examples {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.trait-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trait-move-btn {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  width: 28px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  transition: all 0.2s ease;
+}
+
+.trait-move-btn:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: var(--color-background);
+  border-color: var(--color-primary);
+}
+
+.trait-move-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.trait-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 300px;
+  z-index: 100;
+  margin-top: var(--spacing-xs);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  white-space: normal;
+}
+
+.trait-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-bottom-color: var(--color-border);
+}
+
+/* Traits Summary in Character Summary */
+.traits-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.trait-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-surface-elevated);
+  border-radius: var(--radius-sm);
+}
+
+.trait-summary-name {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.trait-summary-modifier {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
 /* Responsive adjustments for creator */
 @media (max-width: 768px) {
   .creator-steps {
@@ -2306,5 +2465,25 @@ body {
 
   .creator-actions .btn {
     width: 100%;
+  }
+
+  .traits-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trait-item {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+
+  .trait-modifier {
+    font-size: 1rem;
+    min-width: 32px;
+  }
+
+  .trait-tooltip {
+    left: 0;
+    transform: none;
+    max-width: 100%;
   }
 }

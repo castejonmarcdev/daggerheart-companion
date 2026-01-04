@@ -151,7 +151,8 @@ export async function downloadCharacterSheet(
     const filledPdfBytes = await pdfDoc.save();
 
     // Create a blob and download
-    const blob = new Blob([filledPdfBytes], { type: 'application/pdf' });
+    // Cast to any to avoid TypeScript issues with Uint8Array buffer type
+    const blob = new Blob([filledPdfBytes as BlobPart], { type: 'application/pdf' });
     const url = URL.createObjectURL(blob);
 
     // Generate filename with character info
