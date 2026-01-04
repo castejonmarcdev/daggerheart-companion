@@ -842,7 +842,7 @@ async function buildSearchIndex() {
   const entries: Array<{
     term: string;
     displayName: string;
-    type: 'class' | 'ancestry' | 'community' | 'domain' | 'weapon' | 'armor' | 'mechanic';
+    type: 'class' | 'ancestry' | 'community' | 'domain' | 'weapon' | 'armor' | 'mechanic' | 'guide' | 'guide-section';
     slug: string;
     priority: number;
     preview: string;
