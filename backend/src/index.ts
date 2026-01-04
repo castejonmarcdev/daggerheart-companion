@@ -51,11 +51,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Start server
+const HOST = process.env.HOST || '0.0.0.0';
+
 async function start() {
   try {
     await connectDB();
-    app.listen(PORT, () => {
-      console.log(`🗡️ Daggerheart API running on http://localhost:${PORT}`);
+    app.listen(Number(PORT), HOST, () => {
+      console.log(`🗡️ Daggerheart API running on http://${HOST}:${PORT}`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);
