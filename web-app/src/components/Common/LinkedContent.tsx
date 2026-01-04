@@ -89,8 +89,8 @@ interface LinkedContentProps {
 // Process markdown formatting (bold, italic)
 function processMarkdown(text: string): (string | JSX.Element)[] {
   const result: (string | JSX.Element)[] = [];
-  // Match **bold**, *italic*, or ***bold italic***
-  const markdownPattern = /(\*\*\*(.+?)\*\*\*|\*\*(.+?)\*\*|\*(.+?)\*)/g;
+  // Match **bold**, *italic*, or ***bold italic*** - non-greedy matching
+  const markdownPattern = /(\*\*\*(.+?)\*\*\*|\*\*(.+?)\*\*|\*([^*]+?)\*)/g;
   let lastIndex = 0;
   let match;
 
