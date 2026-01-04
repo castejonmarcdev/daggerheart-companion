@@ -86,64 +86,129 @@ interface LinkedContentProps {
   content: string;
 }
 
+// Process markdown formatting (bold, italic)
+function processMarkdown(text: string): (string | JSX.Element)[] {
+  const result: (string | JSX.Element)[] = [];
+  // Match **bold**, *italic*, or ***bold italic***
+  const markdownPattern = /(\*\*\*(.+?)\*\*\*|\*\*(.+?)\*\*|\*(.+?)\*)/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = markdownPattern.exec(text)) !== null) {
+    // Add text before the match
+    if (match.index > lastIndex) {
+      result.push(text.slice(lastIndex, match.index));
+    }
+
+    const fullMatch = match[0];
+    if (match[2]) {
+      // ***bold italic***
+      result.push(<strong key={match.index}><em>{match[2]}</em></strong>);
+    } else if (match[3]) {
+      // **bold**
+      result.push(<strong key={match.index}>{match[3]}</strong>);
+    } else if (match[4]) {
+      // *italic*
+      result.push(<em key={match.index}>{match[4]}</em>);
+    }
+
+    lastIndex = match.index + fullMatch.length;
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    result.push(text.slice(lastIndex));
+  }
+
+  return result.length > 0 ? result : [text];
+}
+
 export function LinkedContent({ content }: LinkedContentProps) {
   // Split content into paragraphs
   const paragraphs = content.split('\n').filter(p => p.trim());
 
   return (
     <div className="linked-content">
-      {paragraphs.map((paragraph, pIndex) => (
-        <p key={pIndex}>
-          <LinkedParagraph text={paragraph} />
-        </p>
-      ))}
+      {paragraphs.map((paragraph, pIndex) => {
+        // Check if it's a list item
+        const isBullet = paragraph.trim().startsWith('- ');
+        const text = isBullet ? paragraph.trim().slice(2) : paragraph;
+
+        if (isBullet) {
+          return (
+            <p key={pIndex} className="bullet-item">
+              <LinkedParagraph text={text} />
+            </p>
+          );
+        }
+
+        return (
+          <p key={pIndex}>
+            <LinkedParagraph text={paragraph} />
+          </p>
+        );
+      })}
     </div>
   );
 }
 
 function LinkedParagraph({ text }: { text: string }) {
-  const parts: (string | JSX.Element)[] = [];
-  let lastIndex = 0;
-  let match;
+  // First, process markdown formatting
+  const markdownParts = processMarkdown(text);
 
-  // Reset regex state
-  termPattern.lastIndex = 0;
-
-  while ((match = termPattern.exec(text)) !== null) {
-    const term = match[0];
-    const termLower = term.toLowerCase();
-    const path = linkableTerms[termLower];
-
-    if (path) {
-      // Add text before the match
-      if (match.index > lastIndex) {
-        parts.push(text.slice(lastIndex, match.index));
-      }
-
-      // Add the linked term
-      parts.push(
-        <Link key={`${match.index}-${term}`} to={path} className="term-link">
-          {term}
-        </Link>
-      );
-
-      lastIndex = match.index + term.length;
+  // Then process each part for term links
+  const result = markdownParts.flatMap((part, partIndex) => {
+    if (typeof part !== 'string') {
+      // It's already a JSX element (bold/italic), process its children for links
+      return <Fragment key={`md-${partIndex}`}>{part}</Fragment>;
     }
-  }
 
-  // Add remaining text
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
-  }
+    // Process string parts for term links
+    const linkedParts: (string | JSX.Element)[] = [];
+    let lastIndex = 0;
+    let match;
 
-  // If no matches, just return the text
-  if (parts.length === 0) {
-    return <>{text}</>;
-  }
+    // Reset regex state
+    termPattern.lastIndex = 0;
+
+    while ((match = termPattern.exec(part)) !== null) {
+      const term = match[0];
+      const termLower = term.toLowerCase();
+      const path = linkableTerms[termLower];
+
+      if (path) {
+        // Add text before the match
+        if (match.index > lastIndex) {
+          linkedParts.push(part.slice(lastIndex, match.index));
+        }
+
+        // Add the linked term
+        linkedParts.push(
+          <Link key={`${partIndex}-${match.index}-${term}`} to={path} className="term-link">
+            {term}
+          </Link>
+        );
+
+        lastIndex = match.index + term.length;
+      }
+    }
+
+    // Add remaining text
+    if (lastIndex < part.length) {
+      linkedParts.push(part.slice(lastIndex));
+    }
+
+    // If no matches, just return the original string
+    if (linkedParts.length === 0) {
+      return part;
+    }
+
+    return linkedParts;
+  });
 
   return (
     <>
-      {parts.map((part, i) => (
+      {result.map((part, i) => (
         <Fragment key={i}>{part}</Fragment>
       ))}
     </>
