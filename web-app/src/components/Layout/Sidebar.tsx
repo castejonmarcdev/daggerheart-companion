@@ -27,7 +27,7 @@ interface RootCategory {
 // Wiki sections - reference content
 const wikiSections: NavSection[] = [
   {
-    title: 'Character Creation',
+    title: 'Character Creation Guide',
     path: '/guides/character-creation',
     icon: '📝',
     children: [
@@ -174,14 +174,14 @@ const toolsSections: NavSection[] = [
 
 const rootCategories: RootCategory[] = [
   {
-    title: 'Wiki',
-    icon: '📚',
-    sections: wikiSections,
-  },
-  {
     title: 'Tools',
     icon: '🛠️',
     sections: toolsSections,
+  },
+  {
+    title: 'Wiki',
+    icon: '📚',
+    sections: wikiSections,
   },
 ];
 

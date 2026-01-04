@@ -1,0 +1,121 @@
+{
+  "gm-guidance": {
+    "name": "GM Guidance",
+    "description": "The GM is responsible for guiding the narrative and roleplaying the world the PCs inhabit.",
+    "icon": "🎭",
+    "sections": [
+      {
+        "title": "GM Principles",
+        "slug": "principles",
+        "content": "**BEGIN AND END WITH THE FICTION**\nUse the fiction to drive mechanics, then connect the mechanics back to the fiction.\n\n**COLLABORATE AT ALL TIMES, ESPECIALLY DURING CONFLICT**\nThe PCs are the protagonists of the campaign; antagonism between player and GM should exist only in the fiction.\n\n**FILL THE WORLD WITH LIFE, WONDER, AND DANGER**\nShowcase rich cultures, take the PCs to wondrous places, and introduce them to dangerous creatures.\n\n**ASK QUESTIONS AND INCORPORATE THE ANSWERS**\nEnsuring that the players' ideas are included results in a narrative that supports the whole group's creativity.\n\n**GIVE EVERY ROLL IMPACT**\nOnly ask the players to roll during meaningful moments.\n\n**PLAY TO FIND OUT WHAT HAPPENS**\nBe surprised by what the characters do, the choices they make, and the people they become.\n\n**HOLD ON GENTLY**\nDon't worry if you need to abandon or alter something that came before."
+      },
+      {
+        "title": "GM Practices",
+        "slug": "practices",
+        "content": "**CULTIVATE A CURIOUS TABLE**\nFollow what catches the players' interest to foster an environment of creative inquiry.\n\n**GAIN YOUR PLAYERS' TRUST**\nAct in good faith, follow through on your promises, admit your mistakes.\n\n**KEEP THE STORY MOVING FORWARD**\nAdvance the story through escalating action, new information, or changing circumstances after every action roll.\n\n**CUT TO THE ACTION**\nSkip past the boring bits. When a scene drags on, end it.\n\n**HELP THE PLAYERS USE THE GAME**\nPlayers have more fun when you help them understand the system.\n\n**CREATE A META CONVERSATION**\nEmpower players to speak out of character, use safety tools, and ask for clarification.\n\n**TELL THEM WHAT THEY WOULD KNOW**\nDon't hide obvious details or important information from the players.\n\n**GROUND THE WORLD IN MOTIVE**\nAn NPC's actions flow from their goals and desires.\n\n**BRING THE GAME'S MECHANICS TO LIFE**\nSet a good example of how fiction and mechanics work together.\n\n**REFRAME RATHER THAN REJECT**\nIf a player's contribution conflicts with the fiction, work with them to reshape it.\n\n**WORK IN MOMENTS AND MONTAGES**\nWhen framing a scene, decide which beats should be savored and which shouldn't linger."
+      },
+      {
+        "title": "Pitfalls to Avoid",
+        "slug": "pitfalls",
+        "content": "**UNDERMINING THE HEROES**\nIf a roll doesn't go well, show how it was impacted by an adversary's prowess, environmental factors, or unexpected surprises, rather than the PC's incompetence.\n\n**ALWAYS TELLING THE PLAYERS WHAT TO ROLL**\nLet the players decide how to handle a challenge.\n\n**LETTING SCENES DRAG**\nShake it up or cut away when a scene has concluded, the table's energy is flagging, or people are talking in circles.\n\n**SINGULAR SOLUTIONS**\nDon't get hung up on one right answer to a problem. If the players have a clever idea, make it work.\n\n**OVERPLANNING**\nSpend your prep time inventing situations instead of scripting scenes. If the players surprise you, take a break to think through your options.\n\n**HOARDING FEAR**\nSpend Fear when you have the opportunity. The players will always generate more."
+      },
+      {
+        "title": "Core GM Mechanics",
+        "slug": "gm-mechanics",
+        "content": "**ROLLING DICE**\nThe GM has no Duality Dice; instead, they roll a single d20 called the GM's Die.\n\n**ADVERSARY ATTACK ROLLS**\nRoll d20 and add adversary's attack bonus. If total meets or beats target's Evasion, the attack succeeds. On success, roll damage dice.\n\n**CRITICAL HITS**\nRolling natural 20 automatically succeeds and deals extra damage. Roll damage normally, then add the highest number on the damage dice to the total. (Example: 3d6+2 deals 18+3d6+2 on critical success.)\n\n*Note: Critical success on an adversary's reaction roll automatically succeeds but confers no additional benefit.*"
+      },
+      {
+        "title": "Action Roll Guidance",
+        "slug": "action-roll-guidance",
+        "content": "After a player describes a move, consider:\n\n- Whether the roll is necessary (consider Experiences, backstory, pressure, possible outcomes)\n- Establish the stakes before the player rolls\n- Communicate any unavoidable consequences\n- Optionally offer the player a choice to forgo a roll in exchange for an interesting outcome, cost, or complication"
+      },
+      {
+        "title": "Making GM Moves",
+        "slug": "gm-moves",
+        "content": "GM moves change the story in response to player actions. They aren't bound by specific spells or effects - describe actions however the fiction demands.\n\n**WHEN TO MAKE A MOVE:**\n- Player rolls with Fear\n- Player fails an action roll\n- Player does something with unavoidable consequences\n- Player gives you a \"golden opportunity\" (an opening demanding immediate response)\n- Players look to you for what happens next"
+      },
+      {
+        "title": "Roll Results",
+        "slug": "roll-results",
+        "content": "**CRITICAL SUCCESS**\nLet the player describe their success, then give them an additional opportunity or advantage.\n\n**SUCCESS WITH HOPE**\nLet the player describe their success, then show how the world reacts to it.\n\n**SUCCESS WITH FEAR**\nWork with the player to describe their success, then take a Fear and make a GM move to introduce a minor consequence, complication, or cost:\n- An adversary attacks\n- The PC marks a Stress\n- Introduce a new threat\n- Raise the stakes of the conflict\n\n**FAILURE WITH HOPE**\nDescribe how the PC fails to get what they want, then make a GM move to introduce a minor consequence, complication, or cost:\n- An adversary attacks\n- The PC marks a Stress\n- Introduce a new threat\n- Show how the world reacts\n- Ask a question and build on the answer\n- Make an NPC act in accordance with their motive\n- Drive a PC to take action by dangling their goals in front of them\n\n**FAILURE WITH FEAR**\nDescribe how the PC fails, then take a Fear and make a GM move to introduce a major consequence, complication, or cost."
+      },
+      {
+        "title": "GM Moves List",
+        "slug": "moves-list",
+        "content": "**SOFT MOVES** (hints, warnings, setup):\n- Reveal an unwelcome truth\n- Show signs of an approaching threat\n- Offer an opportunity with cost\n- Tell them the requirements and ask\n- Put someone in a spot\n- Separate them\n- Announce off-screen badness\n\n**HARD MOVES** (immediate consequences):\n- Deal damage\n- Use a monster's special ability\n- Make a move from an environment\n- Capture or corner someone\n- Destroy something\n- Take away something\n- Create a deadline\n- Inflict a condition"
+      },
+      {
+        "title": "Fear Features",
+        "slug": "fear-features",
+        "content": "Many adversaries and environments have Fear Features - especially powerful or consequential moves that the GM must spend Fear to activate.\n\n*Note: This Fear is in addition to any Fear previously spent to seize the spotlight or activate another action or ability.*"
+      },
+      {
+        "title": "Adversary Actions",
+        "slug": "adversary-actions",
+        "content": "When play passes to the GM, they can make a GM move to spotlight an adversary. A spotlighted adversary can:\n\n- Move within Close range and make a standard attack\n- Move within Close range and use an adversary action\n- Clear a condition\n- Sprint within Far or Very Far range on the battlefield\n- Do anything else the fiction demands or GM deems appropriate\n\nThe GM can spend additional Fear to spotlight additional adversaries. Once finished, the spotlight swings back to the PCs."
+      },
+      {
+        "title": "Player Principles",
+        "slug": "player-principles",
+        "content": "**PRINCIPLES:**\n- Be a fan of your character and their journey\n- Spotlight your friends\n- Address the characters and address the players\n- Build the world together\n- Play to find out what happens\n- Hold on gently\n\n**BEST PRACTICES:**\n- Embrace danger\n- Use your resources\n- Tell the story\n- Discover your character"
+      }
+    ]
+  },
+  "character-creation": {
+    "name": "Character Creation",
+    "description": "A step-by-step guide to creating your Daggerheart character.",
+    "icon": "📝",
+    "sections": [
+      {
+        "title": "Overview",
+        "slug": "overview",
+        "content": "Unless their table chooses to use pre-generated characters, each player creates their own PC by making a series of guided choices. Some of these decisions are purely narrative, meaning they only appear in or affect the game through roleplaying, but others are mechanical choices that affect the things their PC is able to do and which actions they're more (or less) likely to succeed at when making moves and taking action.\n\n*Note: You can fill in your character's name, pronouns, and Character Description details at any point of the character creation process.*"
+      },
+      {
+        "title": "Step 1: Choose a Class and Subclass",
+        "slug": "step-1-class",
+        "content": "Classes are role-based archetypes that determine which class features and domain cards a PC gains access to throughout the campaign. There are nine classes: Bard, Druid, Guardian, Ranger, Rogue, Seraph, Sorcerer, Warrior, Wizard.\n\n- Select a class and take its corresponding character sheet and character guide printouts. These sheets are for recording your PC's details; you'll update and reference them throughout the campaign.\n- Every class begins with one or more unique class feature(s), described at the bottom left of each class's character sheet. If your class feature prompts you to make a selection, do so now.\n- **Choose a Subclass:** Subclasses further refine a class archetype and reinforce its expression by granting access to unique subclass features. Each class comprises two subclasses. Select one of your class's subclasses and take its Foundation card."
+      },
+      {
+        "title": "Step 2: Choose Your Heritage",
+        "slug": "step-2-heritage",
+        "content": "Your character's heritage combines two elements: ancestry and community.\n\n**ANCESTRY**\nA character's ancestry represents their species or lineage; it grants them certain physical traits and two unique ancestry features. Choose one of the following ancestries: Clank, Drakona, Dwarf, Elf, Faerie, Faun, Firbolg, Fungril, Galapa, Giant, Goblin, Halfling, Human, Infernis, Katari, Orc, Ribbet, Simiah.\n\nTo create a **Mixed Ancestry**, take the top (first-listed) ancestry feature from one ancestry and the bottom (second-listed) ancestry feature from another.\n\n**COMMUNITY**\nYour character's community represents their culture or environment of origin and grants them a community feature. Choose one of the following communities: Highborne, Loreborne, Orderborne, Ridgeborne, Seaborne, Slyborne, Underborne, Wanderborne, Wildborne."
+      },
+      {
+        "title": "Step 3: Assign Character Traits",
+        "slug": "step-3-traits",
+        "content": "Your character has six traits that represent their physical, mental, and social aptitude:\n\n**AGILITY** (Use it to Sprint, Leap, Maneuver, etc.)\nA high Agility means you're fast on your feet, nimble on difficult terrain, and quick to react to danger.\n\n**STRENGTH** (Use it to Lift, Smash, Grapple, etc.)\nA high Strength means you're better at feats that test your physical prowess and stamina.\n\n**FINESSE** (Use it to Control, Hide, Tinker, etc.)\nA high Finesse means you're skilled at tasks that require accuracy, stealth, or the utmost control.\n\n**INSTINCT** (Use it to Perceive, Sense, Navigate, etc.)\nA high Instinct means you have a keen sense of your surroundings and a natural intuition.\n\n**PRESENCE** (Use it to Charm, Perform, Deceive, etc.)\nA high Presence means you have a strong force of personality and a facility for social situations.\n\n**KNOWLEDGE** (Use it to Recall, Analyze, Comprehend, etc.)\nA high Knowledge means you know information others don't and understand how to apply your mind through deduction and inference.\n\nWhen you \"roll with a trait,\" that trait's modifier is added to the roll's total. Assign the modifiers **+2, +1, +1, +0, +0, -1** to your character's traits in any order you wish."
+      },
+      {
+        "title": "Step 4: Record Additional Info",
+        "slug": "step-4-info",
+        "content": "- Characters start a new campaign at **Level 1**. Record your level in the designated space at the top of your character sheet.\n- **Evasion** represents your character's ability to avoid damage. Your character's starting Evasion is determined by their class.\n- **Hit Points (HP)** are an abstract measure of your physical health. Your starting HP is determined by your class.\n- **Stress** reflects your ability to withstand mental and emotional strain. Every PC starts with **6 Stress slots**.\n- **Hope** is a metacurrency that fuels special moves and certain abilities. All PCs start with **2 Hope**."
+      },
+      {
+        "title": "Step 5: Choose Starting Equipment",
+        "slug": "step-5-equipment",
+        "content": "**CHOOSE YOUR WEAPON(S):**\nSelect from the Tier 1 Weapon Tables. Either a two-handed primary weapon or a one-handed primary weapon and a one-handed secondary weapon.\n\nAt Level 1, your Proficiency is 1. Calculate your damage roll by combining your Proficiency value with your equipped weapon's damage dice. (Example: If your Proficiency is 1 and your weapon's damage dice is d6+1, your damage roll is 1d6+1.)\n\n**CHOOSE YOUR ARMOR:**\nChoose and equip one set of armor from the Tier 1 Armor Table. Add your character's level to your equipped armor's Base Thresholds. Record your Armor Score (equal to your equipped armor's Base Score plus any bonuses).\n\n**STARTING INVENTORY:**\n- A torch, 50 feet of rope, basic supplies, and a handful of gold\n- EITHER a Minor Health Potion (clear 1d4 Hit Points) OR a Minor Stamina Potion (clear 1d4 Stress)\n- One of the class-specific items listed on your character guide\n- If applicable, whichever class-specific item you selected to carry your spells\n- Any other GM-approved items"
+      },
+      {
+        "title": "Step 6: Create Your Background",
+        "slug": "step-6-background",
+        "content": "Develop your character's background by answering the background questions in your character guide, modifying or replacing them if they don't fit the character you want to play.\n\n*Note: Your background has no explicit mechanical effect, but it greatly affects the character you'll play and the prep the GM will do. Throughout character creation, you can adjust choices you made in earlier steps to better reflect this background. If you wish, you can leave your character's past more ambiguous and discover their backstory through play.*"
+      },
+      {
+        "title": "Step 7: Create Your Experiences",
+        "slug": "step-7-experiences",
+        "content": "An Experience is a word or phrase used to encapsulate a specific set of skills, personality traits, or aptitudes your character has acquired. When your PC makes a move, they can spend a Hope to add a relevant Experience's modifier to the action roll.\n\n- Your PC gets **two Experiences** at character creation, each with a **+2 modifier**.\n- An Experience can't be too broadly applicable and it can't grant specific mechanical benefits like magic spells.\n\n**EXAMPLE EXPERIENCES:**\n\n*Backgrounds:* Assassin, Blacksmith, Bodyguard, Bounty Hunter, Chef to the Royal Family, Circus Performer, Con Artist, Fallen Monarch, Field Medic, High Priestess, Merchant, Noble, Pirate, Politician, Scholar, Soldier, Storyteller, Thief, World Traveler\n\n*Characteristics:* Affable, Battle-Hardened, Bookworm, Charming, Cowardly, Friend to All, Intimidating Presence, Leader, Lone Wolf, Loyal, Observant, Prankster, Silver Tongue, Stubborn to a Fault, Survivor\n\n*Specialties:* Acrobat, Gambler, Healer, Inventor, Magical Historian, Mapmaker, Master of Disguise, Navigator, Sharpshooter, Survivalist, Swashbuckler, Tactician\n\n*Skills:* Animal Whisperer, Barter, Deadly Aim, Fast Learner, Incredible Strength, Liar, Light Feet, Negotiator, Photographic Memory, Quick Hands, Repair, Scavenger, Tracker\n\n*Phrases:* Catch Me If You Can, Fake It Till You Make It, Hold the Line, I Won't Let You Down, I've Got Your Back, Knowledge Is Power, Nature's Friend, Never Again, No One Left Behind, The Show Must Go On"
+      },
+      {
+        "title": "Step 8: Choose Domain Cards",
+        "slug": "step-8-domains",
+        "content": "Your class has access to two of the nine Domains. Choose **two cards** from your class's domains (listed in the upper left of your character sheet). You can take one card from each domain or two from a single domain, whichever you prefer."
+      },
+      {
+        "title": "Step 9: Create Your Connections",
+        "slug": "step-9-connections",
+        "content": "Connections are the relationships between the PCs. To create connections:\n\n1. Go around the table and have each player describe their characters to one another - at a minimum, their name, pronouns, character description, experiences, and the answers to their background questions.\n\n2. Discuss potential connections between the PCs using the questions included in the \"Connections\" section of your character guide as inspiration.\n\n3. Suggest at least one connection between your character and each other player's PC. Accept any suggested connections you want to explore, reject any you don't.\n\n*Note: A player can reject a suggested connection for any reason, and it's okay if there isn't an established connection between every pair of PCs - you can always discover and develop those relationships through play.*"
+      }
+    ]
+  }
+}

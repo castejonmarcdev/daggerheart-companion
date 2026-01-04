@@ -1,19 +1,17 @@
 {
   "name": "daggerheart-backend",
   "version": "1.0.0",
-  "description": "Express + MongoDB backend for Daggerheart Companion",
+  "description": "Express backend for Daggerheart Companion with embedded JSON data",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node -e \"const fs=require('fs');const path=require('path');fs.mkdirSync('dist/data',{recursive:true});fs.readdirSync('src/data').filter(f=>f.endsWith('.json')).forEach(f=>fs.copyFileSync(path.join('src/data',f),path.join('dist/data',f)));console.log('JSON files copied to dist/data')\"",
     "start": "node dist/index.js",
-    "dev": "tsx watch src/index.ts",
-    "seed": "tsx src/scripts/seed.ts"
+    "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mongoose": "^8.0.0"
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

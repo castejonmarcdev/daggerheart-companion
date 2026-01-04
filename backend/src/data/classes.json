@@ -1,0 +1,237 @@
+{
+  "bard": {
+    "name": "Bard",
+    "description": "Bards are masters of captivation and specialize in performance types including singing, playing instruments, weaving tales, or telling jokes. They thrive in social situations.",
+    "domains": ["Grace", "Codex"],
+    "startingEvasion": 10,
+    "startingHP": 5,
+    "classItems": "A romance novel or a letter never opened",
+    "hopeFeature": {
+      "name": "Make a Scene",
+      "description": "Spend 3 Hope to temporarily Distract a target within Close range, giving them a -2 penalty to their Difficulty."
+    },
+    "classFeatures": [
+      { "name": "Rally", "description": "Once per session, describe how you rally the party and give yourself and each ally a Rally Die (d6 at level 1, d8 at level 5). A PC can spend their Rally Die to roll it, adding the result to their action roll, reaction roll, damage roll, or to clear Stress equal to the result." }
+    ],
+    "subclasses": [
+      { "name": "Troubadour", "spellcastTrait": "Presence", "features": [
+        { "name": "Gifted Performer", "description": "Play three types of songs once each per long rest" },
+        { "name": "Maestro", "description": "When you give a Rally Die to an ally, they can gain a Hope or clear a Stress", "type": "specialization" },
+        { "name": "Virtuoso", "description": "Perform each song twice per long rest", "type": "mastery" }
+      ]},
+      { "name": "Wordsmith", "spellcastTrait": "Presence", "features": [
+        { "name": "Rousing Speech", "description": "Once per long rest, all allies within Far range clear 2 Stress" },
+        { "name": "Heart of a Poet", "description": "Spend a Hope to add d4 to action rolls to impress/persuade/offend" },
+        { "name": "Eloquent", "description": "Once per session, provide various aids to allies", "type": "specialization" },
+        { "name": "Epic Poetry", "description": "Rally Die increases to d10", "type": "mastery" }
+      ]}
+    ]
+  },
+  "druid": {
+    "name": "Druid",
+    "description": "Druids learn from and protect the magic of the wilderness. They can transform into beasts and shape nature itself.",
+    "domains": ["Sage", "Arcana"],
+    "startingEvasion": 10,
+    "startingHP": 6,
+    "classItems": "A small bag of rocks and bones or a strange pendant",
+    "hopeFeature": { "name": "Evolution", "description": "Spend 3 Hope to transform into Beastform without marking Stress. Choose one trait to raise by +1 until you drop out." },
+    "classFeatures": [
+      { "name": "Beastform", "description": "Mark a Stress to transform into a creature from the Beastform list" },
+      { "name": "Wildtouch", "description": "Perform harmless nature effects at will" }
+    ],
+    "subclasses": [
+      { "name": "Warden of the Elements", "spellcastTrait": "Instinct", "features": [
+        { "name": "Elemental Incarnation", "description": "Channel Fire, Earth, Water, or Air with unique effects" },
+        { "name": "Elemental Aura", "description": "Assume an aura matching your element", "type": "specialization" },
+        { "name": "Elemental Dominion", "description": "Further embody your element", "type": "mastery" }
+      ]},
+      { "name": "Warden of Renewal", "spellcastTrait": "Instinct", "features": [
+        { "name": "Clarity of Nature", "description": "Create a space of serenity to clear Stress" },
+        { "name": "Regeneration", "description": "Spend 3 Hope to clear 1d4 Hit Points on a touched creature" },
+        { "name": "Warden's Protection", "description": "Clear 2 HP on 1d4 allies", "type": "specialization" },
+        { "name": "Defender", "description": "Reduce ally damage while in Beastform", "type": "mastery" }
+      ]}
+    ]
+  },
+  "guardian": {
+    "name": "Guardian",
+    "description": "Guardians are known for fighting with remarkable ferocity even against overwhelming odds, defending their cohort above all else.",
+    "domains": ["Valor", "Blade"],
+    "startingEvasion": 9,
+    "startingHP": 7,
+    "classItems": "A totem from your mentor or a secret key",
+    "hopeFeature": { "name": "Frontline Tank", "description": "Spend 3 Hope to clear 2 Armor Slots." },
+    "classFeatures": [
+      { "name": "Unstoppable", "description": "Once per long rest, become Unstoppable with an Unstoppable Die (d4 at level 1, d6 at level 5). While Unstoppable: reduce physical damage severity by one threshold, add Unstoppable Die value to damage roll, can't be Restrained or Vulnerable." }
+    ],
+    "subclasses": [
+      { "name": "Stalwart", "spellcastTrait": "", "features": [
+        { "name": "Unwavering", "description": "+1 to damage thresholds" },
+        { "name": "Iron Will", "description": "Mark additional Armor Slot to reduce severity" },
+        { "name": "Unrelenting", "description": "+2 to damage thresholds", "type": "specialization" },
+        { "name": "Undaunted", "description": "+3 to damage thresholds, Loyal Protector", "type": "mastery" }
+      ]},
+      { "name": "Vengeance", "spellcastTrait": "", "features": [
+        { "name": "At Ease", "description": "Additional Stress slot" },
+        { "name": "Revenge", "description": "Mark 2 Stress to force attacker to mark a Hit Point" },
+        { "name": "Act of Reprisal", "description": "+1 Proficiency against damaging adversary", "type": "specialization" },
+        { "name": "Nemesis", "description": "Prioritize an adversary for special benefits", "type": "mastery" }
+      ]}
+    ]
+  },
+  "ranger": {
+    "name": "Ranger",
+    "description": "Rangers are highly skilled hunters who become sly tacticians, pursuing quarry with cunning and patience.",
+    "domains": ["Bone", "Sage"],
+    "startingEvasion": 12,
+    "startingHP": 6,
+    "classItems": "A trophy from your first kill or a seemingly broken compass",
+    "hopeFeature": { "name": "Hold Them Off", "description": "Spend 3 Hope when you succeed on an attack to use that roll against two additional adversaries." },
+    "classFeatures": [
+      { "name": "Ranger's Focus", "description": "Spend a Hope to make a target your Focus, gaining: know their precise direction, target must mark Stress when you deal damage, can reroll Duality Dice on failed attacks against them." }
+    ],
+    "subclasses": [
+      { "name": "Beastbound", "spellcastTrait": "Agility", "features": [
+        { "name": "Companion", "description": "Animal companion that stays by your side" },
+        { "name": "Expert Training", "description": "Additional level-up option for companion", "type": "specialization" },
+        { "name": "Advanced Training", "description": "Two additional level-up options, Loyal Friend", "type": "mastery" }
+      ]},
+      { "name": "Wayfinder", "spellcastTrait": "Agility", "features": [
+        { "name": "Ruthless Predator", "description": "Mark Stress for +1 Proficiency" },
+        { "name": "Path Forward", "description": "Identify shortest path to visited locations" },
+        { "name": "Elusive Predator", "description": "+2 Evasion against Focus attacks", "type": "specialization" },
+        { "name": "Apex Predator", "description": "Remove Fear from GM pool on successful Focus attack", "type": "mastery" }
+      ]}
+    ]
+  },
+  "rogue": {
+    "name": "Rogue",
+    "description": "Rogues are scoundrels who move through the world anonymously, utilizing sharp wits and blades.",
+    "domains": ["Midnight", "Grace"],
+    "startingEvasion": 12,
+    "startingHP": 6,
+    "classItems": "A set of forgery tools or a grappling hook",
+    "hopeFeature": { "name": "Rogue's Dodge", "description": "Spend 3 Hope to gain +2 Evasion until attacked successfully or next rest." },
+    "classFeatures": [
+      { "name": "Cloaked", "description": "Enhanced Hidden condition" },
+      { "name": "Sneak Attack", "description": "Add d6s equal to tier to damage while Cloaked or ally is near target" }
+    ],
+    "subclasses": [
+      { "name": "Nightwalker", "spellcastTrait": "Finesse", "features": [
+        { "name": "Shadow Stepper", "description": "Move from shadow to shadow, becoming Cloaked" },
+        { "name": "Dark Cloud", "description": "Create temporary dark cloud", "type": "specialization" },
+        { "name": "Fleeting Shadow", "description": "+1 Evasion, extended Shadow Stepper range", "type": "mastery" }
+      ]},
+      { "name": "Syndicate", "spellcastTrait": "Finesse", "features": [
+        { "name": "Well-Connected", "description": "Know someone in every prominent location" },
+        { "name": "Contacts Everywhere", "description": "Call on shady contacts once per session", "type": "specialization" },
+        { "name": "Reliable Backup", "description": "Use contacts three times per session", "type": "mastery" }
+      ]}
+    ]
+  },
+  "seraph": {
+    "name": "Seraph",
+    "description": "Seraphs are divine fighters and healers imbued with sacred purpose.",
+    "domains": ["Splendor", "Valor"],
+    "startingEvasion": 9,
+    "startingHP": 7,
+    "classItems": "A bundle of offerings or a sigil of your god",
+    "hopeFeature": { "name": "Life Support", "description": "Spend 3 Hope to clear a Hit Point on an ally within Close range." },
+    "classFeatures": [
+      { "name": "Prayer Dice", "description": "Roll d4s equal to Spellcast trait at session start. Spend to aid yourself or allies: reduce damage, add to rolls, or gain Hope." }
+    ],
+    "subclasses": [
+      { "name": "Divine Wielder", "spellcastTrait": "Strength", "features": [
+        { "name": "Spirit Weapon", "description": "Equipped Melee/Very Close weapon can attack at Close range" },
+        { "name": "Sparing Touch", "description": "Clear 2 HP or 2 Stress once per long rest" },
+        { "name": "Devout", "description": "Roll extra Prayer Die, use Sparing Touch twice", "type": "specialization" },
+        { "name": "Sacred Resonance", "description": "Double matching damage dice", "type": "mastery" }
+      ]},
+      { "name": "Winged Sentinel", "spellcastTrait": "Strength", "features": [
+        { "name": "Wings of Light", "description": "Fly, carry creatures, deal extra damage" },
+        { "name": "Ethereal Visage", "description": "Advantage on Presence Rolls while flying", "type": "specialization" },
+        { "name": "Ascendant", "description": "+4 to Severe threshold", "type": "mastery" },
+        { "name": "Power of the Gods", "description": "Deal 1d12 extra damage while flying", "type": "mastery" }
+      ]}
+    ]
+  },
+  "sorcerer": {
+    "name": "Sorcerer",
+    "description": "Sorcerers cultivate and control innate magical power passed down through families.",
+    "domains": ["Arcana", "Midnight"],
+    "startingEvasion": 10,
+    "startingHP": 6,
+    "classItems": "A whispering orb or a family heirloom",
+    "hopeFeature": { "name": "Volatile Magic", "description": "Spend 3 Hope to reroll any damage dice on magic damage attacks." },
+    "classFeatures": [
+      { "name": "Arcane Sense", "description": "Sense magical people and objects within Close range" },
+      { "name": "Minor Illusion", "description": "Create visual illusions within Close range" },
+      { "name": "Channel Raw Power", "description": "Place domain card in vault to gain Hope or enhance damage" }
+    ],
+    "subclasses": [
+      { "name": "Elemental Origin", "spellcastTrait": "Instinct", "features": [
+        { "name": "Elementalist", "description": "Choose air, earth, fire, lightning, or water; shape element" },
+        { "name": "Natural Evasion", "description": "Add d6 to Evasion against attacks", "type": "specialization" },
+        { "name": "Transcendence", "description": "Transform into physical manifestation of element", "type": "mastery" }
+      ]},
+      { "name": "Primal Origin", "spellcastTrait": "Instinct", "features": [
+        { "name": "Manipulate Magic", "description": "Mark Stress after spells to extend reach, add bonuses, etc." },
+        { "name": "Enchanted Aid", "description": "Roll d8 when helping ally with Spellcast", "type": "specialization" },
+        { "name": "Arcane Charge", "description": "Gather magical energy to enhance capabilities", "type": "mastery" }
+      ]}
+    ]
+  },
+  "warrior": {
+    "name": "Warrior",
+    "description": "Warriors master weapons and violence through training and dedication, understanding the importance of an agile body and mind.",
+    "domains": ["Blade", "Bone"],
+    "startingEvasion": 11,
+    "startingHP": 6,
+    "classItems": "The drawing of a lover or a sharpening stone",
+    "hopeFeature": { "name": "No Mercy", "description": "Spend 3 Hope to gain +1 to attack rolls until next rest." },
+    "classFeatures": [
+      { "name": "Attack of Opportunity", "description": "Reaction roll when adversary attempts to leave Melee range" },
+      { "name": "Combat Training", "description": "Ignore weapon burden, add level to physical damage rolls" }
+    ],
+    "subclasses": [
+      { "name": "Call of the Brave", "spellcastTrait": "", "features": [
+        { "name": "Courage", "description": "Gain Hope when you fail with Fear" },
+        { "name": "Battle Ritual", "description": "Clear 2 Stress and gain 2 Hope before dangerous situations" },
+        { "name": "Rise to the Challenge", "description": "Roll d20 as Hope Die at 2 or fewer HP", "type": "specialization" },
+        { "name": "Camaraderie", "description": "Extra Tag Team Roll, reduced cost for allies", "type": "mastery" }
+      ]},
+      { "name": "Call of the Slayer", "spellcastTrait": "", "features": [
+        { "name": "Slayer", "description": "Pool of Slayer Dice to add to attack/damage rolls" },
+        { "name": "Weapon Specialist", "description": "Add secondary weapon damage die", "type": "specialization" },
+        { "name": "Martial Preparation", "description": "Party gains Martial Preparation downtime move", "type": "mastery" }
+      ]}
+    ]
+  },
+  "wizard": {
+    "name": "Wizard",
+    "description": "Wizards acquire and hone magical power through years of learning using books, stones, potions, and herbs.",
+    "domains": ["Codex", "Splendor"],
+    "startingEvasion": 11,
+    "startingHP": 5,
+    "classItems": "A book you're trying to translate or a tiny, harmless elemental pet",
+    "hopeFeature": { "name": "Not This Time", "description": "Spend 3 Hope to force an adversary to reroll an attack or damage roll." },
+    "classFeatures": [
+      { "name": "Prestidigitation", "description": "Perform harmless magical effects at will" },
+      { "name": "Strange Patterns", "description": "Choose a number 1-12; gain Hope or clear Stress when rolled" }
+    ],
+    "subclasses": [
+      { "name": "School of Knowledge", "spellcastTrait": "Knowledge", "features": [
+        { "name": "Prepared", "description": "Take additional domain card" },
+        { "name": "Adept", "description": "Mark Stress instead of spending Hope to double Experience modifier" },
+        { "name": "Accomplished", "description": "Another additional domain card", "type": "specialization" },
+        { "name": "Brilliant", "description": "Another additional domain card, Honed Expertise", "type": "mastery" }
+      ]},
+      { "name": "School of War", "spellcastTrait": "Knowledge", "features": [
+        { "name": "Battlemage", "description": "Additional Hit Point slot" },
+        { "name": "Face Your Fear", "description": "Deal extra 1d10 magic damage on success with Fear" },
+        { "name": "Conjure Shield", "description": "Add Proficiency to Evasion with 2+ Hope", "type": "specialization" },
+        { "name": "Have No Fear", "description": "Extra damage increases to 3d10", "type": "mastery" }
+      ]}
+    ]
+  }
+}

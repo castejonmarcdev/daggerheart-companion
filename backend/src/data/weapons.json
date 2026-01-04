@@ -1,0 +1,20 @@
+[
+  { "name": "Broadsword", "tier": 1, "category": "primary", "trait": "Agility", "range": "Melee", "damage": "d8 phy", "damageType": "phy", "burden": "One-Handed", "feature": "Reliable: +1 to attack rolls" },
+  { "name": "Longsword", "tier": 1, "category": "primary", "trait": "Agility", "range": "Melee", "damage": "d8+3 phy", "damageType": "phy", "burden": "Two-Handed" },
+  { "name": "Battleaxe", "tier": 1, "category": "primary", "trait": "Strength", "range": "Melee", "damage": "d10+3 phy", "damageType": "phy", "burden": "Two-Handed" },
+  { "name": "Greatsword", "tier": 1, "category": "primary", "trait": "Strength", "range": "Melee", "damage": "d10+3 phy", "damageType": "phy", "burden": "Two-Handed", "feature": "Massive: -1 Evasion; roll extra die, discard lowest" },
+  { "name": "Mace", "tier": 1, "category": "primary", "trait": "Strength", "range": "Melee", "damage": "d8+1 phy", "damageType": "phy", "burden": "One-Handed" },
+  { "name": "Warhammer", "tier": 1, "category": "primary", "trait": "Strength", "range": "Melee", "damage": "d12+3 phy", "damageType": "phy", "burden": "Two-Handed", "feature": "Heavy: -1 to Evasion" },
+  { "name": "Dagger", "tier": 1, "category": "primary", "trait": "Finesse", "range": "Melee", "damage": "d8+1 phy", "damageType": "phy", "burden": "One-Handed" },
+  { "name": "Quarterstaff", "tier": 1, "category": "primary", "trait": "Instinct", "range": "Melee", "damage": "d10+3 phy", "damageType": "phy", "burden": "Two-Handed" },
+  { "name": "Cutlass", "tier": 1, "category": "primary", "trait": "Presence", "range": "Melee", "damage": "d8+1 phy", "damageType": "phy", "burden": "One-Handed" },
+  { "name": "Rapier", "tier": 1, "category": "primary", "trait": "Presence", "range": "Melee", "damage": "d8 phy", "damageType": "phy", "burden": "One-Handed", "feature": "Quick: Mark Stress to target another creature" },
+  { "name": "Shortbow", "tier": 1, "category": "primary", "trait": "Agility", "range": "Far", "damage": "d6+3 phy", "damageType": "phy", "burden": "Two-Handed" },
+  { "name": "Crossbow", "tier": 1, "category": "primary", "trait": "Finesse", "range": "Far", "damage": "d6+1 phy", "damageType": "phy", "burden": "One-Handed" },
+  { "name": "Longbow", "tier": 1, "category": "primary", "trait": "Agility", "range": "Very Far", "damage": "d8+3 phy", "damageType": "phy", "burden": "Two-Handed", "feature": "Cumbersome: -1 to Finesse" },
+  { "name": "Shortstaff", "tier": 1, "category": "primary", "trait": "Instinct", "range": "Close", "damage": "d8+1 mag", "damageType": "mag", "burden": "One-Handed" },
+  { "name": "Wand", "tier": 1, "category": "primary", "trait": "Knowledge", "range": "Far", "damage": "d6+1 mag", "damageType": "mag", "burden": "One-Handed" },
+  { "name": "Shortsword", "tier": 1, "category": "secondary", "trait": "Agility", "range": "Melee", "damage": "d8 phy", "damageType": "phy", "burden": "One-Handed", "feature": "Paired: +2 primary damage in Melee" },
+  { "name": "Round Shield", "tier": 1, "category": "secondary", "trait": "Strength", "range": "Melee", "damage": "d4 phy", "damageType": "phy", "burden": "One-Handed", "feature": "Protective: +1 to Armor Score" },
+  { "name": "Tower Shield", "tier": 1, "category": "secondary", "trait": "Strength", "range": "Melee", "damage": "d6 phy", "damageType": "phy", "burden": "One-Handed", "feature": "Barrier: +2 Armor Score; -1 Evasion" }
+]

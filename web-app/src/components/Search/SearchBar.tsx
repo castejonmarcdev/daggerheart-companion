@@ -2,6 +2,16 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { apiClient, AutocompleteResult } from '../../api/client';
 
+// Static tools that can be searched
+const TOOLS: AutocompleteResult[] = [
+  {
+    displayName: 'Character Creator',
+    type: 'tool',
+    slug: 'character-creator',
+    preview: 'Build your Daggerheart character step by step',
+  },
+];
+
 export function SearchBar() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<AutocompleteResult[]>([]);
@@ -16,7 +26,15 @@ export function SearchBar() {
       if (query.length >= 2) {
         try {
           const data = await apiClient.autocomplete(query);
-          setResults(data);
+          // Also search tools client-side
+          const lowerQuery = query.toLowerCase();
+          const matchingTools = TOOLS.filter(
+            tool =>
+              tool.displayName.toLowerCase().includes(lowerQuery) ||
+              tool.preview.toLowerCase().includes(lowerQuery)
+          );
+          // Put tools first, then API results
+          setResults([...matchingTools, ...data]);
           setIsOpen(true);
           setSelectedIndex(-1);
         } catch (error) {
@@ -64,6 +82,8 @@ export function SearchBar() {
         return `/equipment/armor/${result.slug}`;
       case 'mechanic':
         return `/mechanics/${result.slug}`;
+      case 'tool':
+        return `/tools/${result.slug}`;
       default:
         return '/';
     }

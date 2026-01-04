@@ -25,6 +25,9 @@ RUN npm ci --only=production
 # Copy built backend
 COPY --from=backend-builder /app/backend/dist ./dist
 
+# Copy JSON data files
+COPY backend/src/data/*.json ./dist/data/
+
 # Copy built web-app to serve as static files
 COPY --from=web-builder /app/web-app/dist ./public
 

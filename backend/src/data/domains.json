@@ -1,0 +1,11 @@
+{
+  "arcana": { "name": "Arcana", "description": "Arcana is the domain of innate and instinctual magic. Those who choose this path tap into the raw, enigmatic forces of the realms to manipulate both their own energy and the elements.", "classes": ["Druid", "Sorcerer"] },
+  "blade": { "name": "Blade", "description": "Blade is the domain of weapon mastery. Whether by steel, bow, or perhaps a more specialized arm, those who follow this path have the skill to cut short the lives of others.", "classes": ["Guardian", "Warrior"] },
+  "bone": { "name": "Bone", "description": "Bone is the domain of tactics and the body. Practitioners of this domain have an uncanny control over their own physical abilities and an eye for predicting the behaviors of others in combat.", "classes": ["Ranger", "Warrior"] },
+  "codex": { "name": "Codex", "description": "Codex is the domain of intensive magical study. Those who seek magical knowledge turn to the equations of power recorded in books, written on scrolls, etched into walls, or tattooed on bodies.", "classes": ["Bard", "Wizard"] },
+  "grace": { "name": "Grace", "description": "Grace is the domain of charisma. Through rapturous storytelling, charming spells, or a shroud of lies, those who channel this power define the realities of their adversaries.", "classes": ["Bard", "Rogue"] },
+  "midnight": { "name": "Midnight", "description": "Midnight is the domain of shadows and secrecy. Whether by clever tricks, deft magic, or the cloak of night, those who channel these forces practice the art of obscurity.", "classes": ["Rogue", "Sorcerer"] },
+  "sage": { "name": "Sage", "description": "Sage is the domain of the natural world. Those who walk this path tap into the unfettered power of the earth and its creatures to unleash raw magic.", "classes": ["Druid", "Ranger"] },
+  "splendor": { "name": "Splendor", "description": "Splendor is the domain of life. Through this magic, followers gain the ability to heal and, to an extent, control death.", "classes": ["Seraph", "Wizard"] },
+  "valor": { "name": "Valor", "description": "Valor is the domain of protection. Whether through attack or defense, those who choose this discipline channel formidable strength to protect their allies in battle.", "classes": ["Guardian", "Seraph"] }
+}

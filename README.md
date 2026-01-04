@@ -9,7 +9,7 @@ Daggerheart/
 ├── resources/
 │   ├── core-rules/         # Daggerheart SRD rules files (10 .txt files)
 │   └── character-sheets/   # Editable PDF character sheets
-├── backend/                # Express + MongoDB API
+├── backend/                # Express API with embedded JSON data
 ├── web-app/                # React + Vite frontend
 └── mcp-server/             # MCP Server for Claude Desktop
 ```
@@ -24,13 +24,14 @@ Daggerheart/
 - **Filterable Equipment**: Filter weapons and armor by tier, category, and traits
 - **Mobile Responsive**: Dark fantasy theme with hamburger menu for mobile devices
 - **Character Sheets**: Downloadable editable PDFs for all classes (standard and multiclass)
+- **No Database Required**: All game data is embedded as JSON files for fast startup and easy deployment
 
 ## Quick Start
 
 ### Using Docker (Recommended)
 
 ```bash
-# Start the app with MongoDB
+# Start the app
 docker-compose up --build
 
 # App will be available at http://localhost:3001
@@ -41,28 +42,17 @@ docker-compose up --build
 #### Prerequisites
 
 - Node.js 18+
-- MongoDB (running locally on port 27017, or provide a connection string)
 
-#### 1. Start MongoDB
-
-```bash
-# If using MongoDB locally
-mongod
-
-# Or use Docker
-docker run -d -p 27017:27017 mongo
-```
-
-#### 2. Set up the Backend
+#### 1. Set up the Backend
 
 ```bash
 cd backend
 npm install
-npm run seed   # Populate database with game data
-npm run dev    # Start API server on port 3001
+npm run build  # Compile TypeScript and copy JSON data
+npm start      # Start API server on port 3001
 ```
 
-#### 3. Set up the Web App
+#### 2. Set up the Web App
 
 ```bash
 cd web-app
@@ -70,7 +60,7 @@ npm install
 npm run dev    # Start frontend on port 5173
 ```
 
-#### 4. Open the App
+#### 3. Open the App
 
 Navigate to http://localhost:5173 in your browser.
 
@@ -82,14 +72,11 @@ Build and run the production container:
 # Build the image
 docker build -t daggerheart-companion .
 
-# Run with external MongoDB
-docker run -p 3001:3001 \
-  -e MONGODB_URI=mongodb://your-mongo-host:27017/daggerheart \
-  -e NODE_ENV=production \
-  daggerheart-companion
+# Run the container
+docker run -p 3001:3001 -e NODE_ENV=production daggerheart-companion
 ```
 
-Or use docker-compose for a complete setup with MongoDB:
+Or use docker-compose:
 
 ```bash
 docker-compose up -d
@@ -155,7 +142,7 @@ Add to Claude Desktop configuration (`claude_desktop_config.json`):
 
 ## Technology Stack
 
-- **Backend**: Express.js, MongoDB, Mongoose, TypeScript
+- **Backend**: Express.js, TypeScript, embedded JSON data store
 - **Frontend**: React 18, Vite, TypeScript, React Router, Zustand, Axios
 - **MCP Server**: Node.js, TypeScript, @modelcontextprotocol/sdk
 - **Deployment**: Docker, Docker Compose
@@ -167,8 +154,7 @@ Add to Claude Desktop configuration (`claude_desktop_config.json`):
 ```bash
 cd backend
 npm run dev    # Start with tsx watch mode
-npm run build  # Compile TypeScript
-npm run seed   # Seed database with game data
+npm run build  # Compile TypeScript and copy JSON data files
 npm start      # Run compiled version
 ```
 
@@ -187,7 +173,6 @@ npm run preview # Preview production build
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/daggerheart` |
 | `PORT` | API server port | `3001` |
 | `HOST` | Server bind address | `0.0.0.0` |
 | `NODE_ENV` | Environment mode | `development` |

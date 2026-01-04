@@ -1,0 +1,6 @@
+[
+  { "name": "Gambeson Armor", "tier": 1, "thresholds": { "major": 5, "severe": 11 }, "score": 3, "feature": "Flexible: +1 to Evasion" },
+  { "name": "Leather Armor", "tier": 1, "thresholds": { "major": 6, "severe": 13 }, "score": 3 },
+  { "name": "Chainmail Armor", "tier": 1, "thresholds": { "major": 7, "severe": 15 }, "score": 4, "feature": "Heavy: -1 to Evasion" },
+  { "name": "Full Plate Armor", "tier": 1, "thresholds": { "major": 8, "severe": 17 }, "score": 4, "feature": "Very Heavy: -2 Evasion; -1 Agility" }
+]

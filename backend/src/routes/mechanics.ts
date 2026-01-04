@@ -1,25 +1,34 @@
 import { Router, Request, Response } from 'express';
-import { Mechanic } from '../models/index.js';
+import { dataStore } from '../data/store.js';
 
 const router = Router();
 
 // GET /api/mechanics - List all mechanics
-router.get('/', async (req: Request, res: Response) => {
+router.get('/', (req: Request, res: Response) => {
   try {
     const { category } = req.query;
-    const filter: Record<string, unknown> = {};
 
+    let mechanics = dataStore.getMechanics();
+
+    // Filter by category if provided
     if (category) {
-      filter.category = category;
+      mechanics = mechanics.filter(m => m.category === category);
     }
 
-    const mechanics = await Mechanic.find(filter, {
-      slug: 1,
-      name: 1,
-      category: 1,
-      summary: 1,
-    }).sort({ category: 1, name: 1 });
-    res.json(mechanics);
+    // Map to list format and sort
+    const result = mechanics
+      .map(m => ({
+        slug: m.slug,
+        name: m.name,
+        category: m.category,
+        summary: m.summary,
+      }))
+      .sort((a, b) => {
+        if (a.category !== b.category) return a.category.localeCompare(b.category);
+        return a.name.localeCompare(b.name);
+      });
+
+    res.json(result);
   } catch (error) {
     console.error('Error fetching mechanics:', error);
     res.status(500).json({ error: 'Failed to fetch mechanics' });
@@ -27,9 +36,9 @@ router.get('/', async (req: Request, res: Response) => {
 });
 
 // GET /api/mechanics/:slug - Get mechanic detail
-router.get('/:slug', async (req: Request, res: Response) => {
+router.get('/:slug', (req: Request, res: Response) => {
   try {
-    const mechanic = await Mechanic.findOne({ slug: req.params.slug });
+    const mechanic = dataStore.getMechanicBySlug(req.params.slug);
     if (!mechanic) {
       return res.status(404).json({ error: 'Mechanic not found' });
     }

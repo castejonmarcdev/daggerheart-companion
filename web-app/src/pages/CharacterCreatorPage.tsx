@@ -13,6 +13,19 @@ import {
 } from '../api/client';
 import { getSubclassImage, getAncestryImage, getCommunityImage } from '../utils/imageUrls';
 
+// Unarmed option for characters who don't want a weapon
+const UNARMED_WEAPON: Weapon = {
+  _id: 'unarmed',
+  slug: 'unarmed',
+  name: 'Unarmed',
+  tier: 1,
+  category: 'primary',
+  trait: 'Unarmed',
+  range: 'Melee',
+  damage: 'd6 phy',
+  damageType: 'phy',
+};
+
 type Step = 'class' | 'subclass' | 'ancestry' | 'community' | 'equipment' | 'summary';
 
 interface CharacterState {
@@ -76,23 +89,23 @@ const subclassInfo: Record<string, { tagline: string; examples: string[] }> = {
   'stalwart': { tagline: 'An immovable fortress—while you stand, your allies cannot fall.', examples: ['Captain America', 'All Might (MHA)'] },
   'vengeance': { tagline: 'Turn every wound you suffer into devastating retribution.', examples: ['The Punisher', 'Guts (Berserk)'] },
   // Ranger
-  'wayfinder': { tagline: 'No terrain can stop you. The wild is your domain and sanctuary.', examples: ['Bear Grylls', 'Ashitaka (Mononoke)'] },
+  'wayfinder': { tagline: 'No terrain can stop you. The wild is your domain and sanctuary.', examples: ['Rengar (League of Legends)', 'Predator'] },
   'beastbound': { tagline: 'Fight alongside a loyal animal companion, two hearts as one.', examples: ['Hiccup & Toothless (HTTYD)', 'Jon Snow & Ghost'] },
   // Rogue
   'syndicate': { tagline: 'Your network of contacts and underworld connections opens any door.', examples: ['Ocean\'s Eleven crew', 'Gentleman (Kingsman)'] },
   'nightwalker': { tagline: 'Become one with the shadows, striking unseen and vanishing without a trace.', examples: ['Batman', 'Corvo (Dishonored)'] },
   // Seraph
   'winged-sentinel': { tagline: 'Soar on divine wings, raining judgment from above.', examples: ['Angel (X-Men)', 'Mercy (Overwatch)'] },
-  'divine-wielder': { tagline: 'Wield holy weapons of pure light, smiting evil with righteous fury.', examples: ['Wonder Woman', 'Michael (Supernatural)'] },
+  'divine-wielder': { tagline: 'Wield holy weapons of pure light, smiting evil with righteous fury.', examples: ['Wonder Woman', 'Thor (MCU)'] },
   // Sorcerer
   'elemental-origin': { tagline: 'Your very blood burns with elemental chaos seeking release.', examples: ['Firestorm (DC)', 'Todoroki (MHA)'] },
   'primal-origin': { tagline: 'Ancient beast spirits rage within you, clawing to break free.', examples: ['Naruto (Nine-Tails)', 'Venom'] },
   // Warrior
-  'call-of-the-brave': { tagline: 'Rally your allies with battle cries that turn fear into courage.', examples: ['William Wallace (Braveheart)', 'Theoden (LOTR)'] },
+  'call-of-the-brave': { tagline: 'Rally your allies with battle cries that turn fear into courage.', examples: ['Theoden (LOTR)', 'Leonidas (300)'] },
   'call-of-the-slayer': { tagline: 'Hunt the biggest threats, taking down monsters others flee from.', examples: ['Geralt (Witcher)', 'Doom Slayer'] },
   // Wizard
   'school-of-knowledge': { tagline: 'Your vast arcane library holds the answer to every mystery.', examples: ['Hermione (HP)', 'The Doctor (Doctor Who)'] },
-  'school-of-war': { tagline: 'Magic and martial prowess combine into devastating battle magic.', examples: ['Gandalf fighting Balrog', 'Saber (Fate)'] },
+  'school-of-war': { tagline: 'Magic and martial prowess combine into devastating battle magic.', examples: ['Gandalf (LOTR)', 'Yennefer (Witcher)'] },
 };
 
 // Ancestry descriptions
@@ -429,7 +442,7 @@ export function CharacterCreatorPage() {
         <div className="equipment-section">
           <h3>Weapon</h3>
           <div className="creator-grid creator-grid-small">
-            {weapons.map(weapon => (
+            {[UNARMED_WEAPON, ...weapons].map(weapon => (
               <button
                 key={weapon.slug}
                 className={`creator-card ${character.weapon?.slug === weapon.slug ? 'selected' : ''}`}

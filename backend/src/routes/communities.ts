@@ -1,16 +1,18 @@
 import { Router, Request, Response } from 'express';
-import { Community } from '../models/index.js';
+import { dataStore } from '../data/store.js';
 
 const router = Router();
 
 // GET /api/communities - List all communities
-router.get('/', async (_req: Request, res: Response) => {
+router.get('/', (_req: Request, res: Response) => {
   try {
-    const communities = await Community.find({}, {
-      slug: 1,
-      name: 1,
-      description: 1,
-    }).sort({ name: 1 });
+    const communities = dataStore.getCommunities()
+      .map(c => ({
+        slug: c.slug,
+        name: c.name,
+        description: c.description,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
     res.json(communities);
   } catch (error) {
     console.error('Error fetching communities:', error);
@@ -19,9 +21,9 @@ router.get('/', async (_req: Request, res: Response) => {
 });
 
 // GET /api/communities/:slug - Get community detail
-router.get('/:slug', async (req: Request, res: Response) => {
+router.get('/:slug', (req: Request, res: Response) => {
   try {
-    const community = await Community.findOne({ slug: req.params.slug });
+    const community = dataStore.getCommunityBySlug(req.params.slug);
     if (!community) {
       return res.status(404).json({ error: 'Community not found' });
     }
