@@ -91,15 +91,18 @@ export function CharacterCreatorPage() {
   const [weapons, setWeapons] = useState<Weapon[]>([]);
   const [armors, setArmors] = useState<Armor[]>([]);
   const [loading, setLoading] = useState(false);
+  const [initialLoading, setInitialLoading] = useState(true);
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   // Load initial data
   useEffect(() => {
-    apiClient.getClasses().then(setClasses);
-    apiClient.getAncestries().then(setAncestries);
-    apiClient.getCommunities().then(setCommunities);
-    apiClient.getWeapons({ tier: 1 }).then(setWeapons);
-    apiClient.getArmor({ tier: 1 }).then(setArmors);
+    Promise.all([
+      apiClient.getClasses().then(setClasses),
+      apiClient.getAncestries().then(setAncestries),
+      apiClient.getCommunities().then(setCommunities),
+      apiClient.getWeapons({ tier: 1 }).then(setWeapons),
+      apiClient.getArmor({ tier: 1 }).then(setArmors),
+    ]).finally(() => setInitialLoading(false));
   }, []);
 
   const currentStepIndex = STEPS.findIndex(s => s.key === currentStep);
@@ -509,6 +512,21 @@ export function CharacterCreatorPage() {
         return null;
     }
   };
+
+  if (initialLoading) {
+    return (
+      <div className="character-creator-page">
+        <div className="creator-header">
+          <h1>Character Creator</h1>
+          <p>Build your Daggerheart character step by step</p>
+        </div>
+        <div className="creator-initial-loading">
+          <div className="spinner"></div>
+          <p>Loading character options...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="character-creator-page">
