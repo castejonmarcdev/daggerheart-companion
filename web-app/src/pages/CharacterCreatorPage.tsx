@@ -12,6 +12,7 @@ import {
   Armor,
 } from '../api/client';
 import { getSubclassImage, getAncestryImage, getCommunityImage } from '../utils/imageUrls';
+import { downloadCharacterSheet } from '../utils/pdfExport';
 
 // Unarmed option for characters who don't want a weapon
 const UNARMED_WEAPON: Weapon = {
@@ -33,7 +34,7 @@ interface CharacterState {
   subclass: Subclass | null;
   ancestry: AncestryDetail | null;
   community: CommunityDetail | null;
-  weapon: Weapon | null;
+  weapons: Weapon[];
   armor: Armor | null;
 }
 
@@ -160,7 +161,7 @@ export function CharacterCreatorPage() {
     subclass: null,
     ancestry: null,
     community: null,
-    weapon: null,
+    weapons: [],
     armor: null,
   });
 
@@ -173,6 +174,7 @@ export function CharacterCreatorPage() {
   const [loading, setLoading] = useState(false);
   const [initialLoading, setInitialLoading] = useState(true);
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
+  const [downloading, setDownloading] = useState(false);
 
   // Load initial data
   useEffect(() => {
@@ -226,7 +228,8 @@ export function CharacterCreatorPage() {
     setLoading(true);
     try {
       const communityDetail = await apiClient.getCommunity(comm.slug);
-      setCharacter(prev => ({ ...prev, community: communityDetail }));
+      // Reset equipment when entering equipment step
+      setCharacter(prev => ({ ...prev, community: communityDetail, weapons: [], armor: null }));
       setCurrentStep('equipment');
     } finally {
       setLoading(false);
@@ -234,7 +237,16 @@ export function CharacterCreatorPage() {
   };
 
   const handleWeaponSelect = (weapon: Weapon) => {
-    setCharacter(prev => ({ ...prev, weapon }));
+    setCharacter(prev => {
+      const isSelected = prev.weapons.some(w => w.slug === weapon.slug);
+      if (isSelected) {
+        // Remove weapon if already selected
+        return { ...prev, weapons: prev.weapons.filter(w => w.slug !== weapon.slug) };
+      } else {
+        // Add weapon to selection
+        return { ...prev, weapons: [...prev.weapons, weapon] };
+      }
+    });
   };
 
   const handleArmorSelect = (armor: Armor) => {
@@ -251,10 +263,32 @@ export function CharacterCreatorPage() {
       subclass: null,
       ancestry: null,
       community: null,
-      weapon: null,
+      weapons: [],
       armor: null,
     });
     setCurrentStep('class');
+  };
+
+  const handleDownloadSheet = async () => {
+    const { classData, subclass, ancestry, community, weapons, armor } = character;
+    if (!classData || !subclass || !ancestry || !community) return;
+
+    setDownloading(true);
+    try {
+      await downloadCharacterSheet({
+        className: classData.name,
+        subclassName: subclass.name,
+        ancestryName: ancestry.name,
+        communityName: community.name,
+        weaponNames: weapons.map(w => w.name),
+        armorName: armor?.name,
+      });
+    } catch (error) {
+      console.error('Failed to download character sheet:', error);
+      alert('Failed to download character sheet. Please try again.');
+    } finally {
+      setDownloading(false);
+    }
   };
 
   const renderStepIndicator = () => (
@@ -440,12 +474,12 @@ export function CharacterCreatorPage() {
 
       <div className="equipment-sections">
         <div className="equipment-section">
-          <h3>Weapon</h3>
+          <h3>Weapons {character.weapons.length > 0 && `(${character.weapons.length} selected)`}</h3>
           <div className="creator-grid creator-grid-small">
             {[UNARMED_WEAPON, ...weapons].map(weapon => (
               <button
                 key={weapon.slug}
-                className={`creator-card ${character.weapon?.slug === weapon.slug ? 'selected' : ''}`}
+                className={`creator-card ${character.weapons.some(w => w.slug === weapon.slug) ? 'selected' : ''}`}
                 onClick={() => handleWeaponSelect(weapon)}
               >
                 <h4>{weapon.name}</h4>
@@ -480,7 +514,7 @@ export function CharacterCreatorPage() {
         <button
           className="btn btn-primary btn-large"
           onClick={handleEquipmentContinue}
-          disabled={!character.weapon || !character.armor}
+          disabled={character.weapons.length === 0 || !character.armor}
         >
           Continue to Summary
         </button>
@@ -489,7 +523,7 @@ export function CharacterCreatorPage() {
   );
 
   const renderSummaryStep = () => {
-    const { classData, subclass, ancestry, community, weapon, armor } = character;
+    const { classData, subclass, ancestry, community, weapons, armor } = character;
 
     if (!classData || !subclass || !ancestry || !community) {
       return <div>Please complete all steps first.</div>;
@@ -546,11 +580,18 @@ export function CharacterCreatorPage() {
             <p><strong>{community.feature.name}:</strong> {community.feature.description}</p>
           </div>
 
-          {(weapon || armor) && (
+          {(weapons.length > 0 || armor) && (
             <div className="summary-section">
               <h3>Equipment</h3>
-              {weapon && (
-                <p><strong>Weapon:</strong> {weapon.name} ({weapon.damage} {weapon.damageType}, {weapon.range})</p>
+              {weapons.length > 0 && (
+                <div>
+                  <strong>Weapons:</strong>
+                  <ul>
+                    {weapons.map((w, i) => (
+                      <li key={i}>{w.name} ({w.damage}, {w.range})</li>
+                    ))}
+                  </ul>
+                </div>
               )}
               {armor && (
                 <p><strong>Armor:</strong> {armor.name} (Score: {armor.score}, Thresholds: {armor.thresholds.major}/{armor.thresholds.severe})</p>
@@ -563,8 +604,12 @@ export function CharacterCreatorPage() {
           <button className="btn btn-secondary" onClick={handleStartOver}>
             Start Over
           </button>
-          <button className="btn btn-primary btn-large">
-            Download Character Sheet (Coming Soon)
+          <button
+            className="btn btn-primary btn-large"
+            onClick={handleDownloadSheet}
+            disabled={downloading}
+          >
+            {downloading ? 'Downloading...' : 'Download Character Sheet'}
           </button>
         </div>
       </div>

@@ -2266,6 +2266,17 @@ body {
   color: var(--color-text);
 }
 
+.summary-section ul {
+  margin: var(--spacing-xs) 0;
+  padding-left: var(--spacing-lg);
+  color: var(--color-text-muted);
+}
+
+.summary-section ul li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.6;
+}
+
 /* Responsive adjustments for creator */
 @media (max-width: 768px) {
   .creator-steps {
