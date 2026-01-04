@@ -1796,33 +1796,24 @@ body {
   }
 
   .app-layout .header-content {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
     gap: var(--spacing-sm);
   }
 
   .header-left {
-    flex-shrink: 1;
-    min-width: 0;
-    overflow: hidden;
-  }
-
-  .header-title {
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .header-title h1 {
     font-size: 1.1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .search-container {
-    width: auto;
-    flex-shrink: 0;
-    min-width: 120px;
-    max-width: 180px;
+    width: 100%;
+    max-width: none;
   }
 
   .search-input {
